@@ -5,5 +5,25 @@
  * ------------------------------------------------------------------ */
 
 
- /* General */
- * { -moz-box-sizing: border-box; box-sizing: border-box;}
+// Layout
+* { -moz-box-sizing: border-box; box-sizing: border-box;}
+
+body {
+	background: @bodyBg;
+	font: @fontSize~"/@{lineHeight} @{baseFontFamily}"; 
+	color: @fontBaseColor;
+}
+
+// Form elements
+select,
+option,
+label,
+input,
+textarea { font-family: ~"@{baseFontFamily}"; }
+
+input,
+textarea { outline: none; }
+textarea { resize: none; }
+
+input[type="submit"],
+button { border: none; }

@@ -1,0 +1,80 @@
+/*
+ *--------------------------------------------------------------
+ *
+ * CSS3 LESS Mixins
+ *
+ * LESS Mixins for projects with CSS3 & LESS
+ * http://lesscss.org
+ *
+ * @mixin font-size (rem & px based)
+ * @mixin text-shadow
+ * @mixin box-round (rounded corner box)
+ * @mixin box-shadow
+ *
+ *
+ *--------------------------------------------------------------
+ */
+
+
+
+
+/*----------------------------------------------------------
+
+ Font Sizing
+ rem sizing based
+ @param sizeValue 	: number (desired px size/10)
+
+----------------------------------------------------------*/
+.font-size(@sizeValue){
+  @remValue: @sizeValue;
+  @pxValue: (@sizeValue * 10);
+  font-size: ~"@{pxValue}px";
+  font-size: ~"@{remValue}rem";
+}
+
+
+
+/*---------------------------------------------------------
+
+ Text Shadow
+ @param x 			: number (X-axis)
+ @param y 			: number (Y-axis)
+ @param z-index		: number (Z-axis)
+ @param color 		: color (hex)
+
+/*----------------------------------------------------------*/
+.text-shadow(@x, @y, @z, @color){
+	text-shadow: @x @y @z @color;
+}
+
+
+
+/*----------------------------------------------------------
+
+ Box Radius
+ @param radius		: number 
+
+----------------------------------------------------------*/
+.box-round(@radius) {
+	-webkit-border-radius: @radius; 
+	-moz-border-radius: @radius; 
+	border-radius: @radius; 
+}
+
+
+
+/*----------------------------------------------------------
+
+ Box Shadow
+ @param x			: number (X-axis)
+ @param y 			: number (Y-axis)
+ @param z 			: number (Z-axis)
+ @param s 			: number (size/strength of shadow) 
+ @param color 		: color (hex, color of shadow)
+
+----------------------------------------------------------*/
+.box-shadow(@x, @y, @z, @s, @color) {
+    -moz-box-shadow: @x @y @z @s @color;
+    -webkit-box-shadow: @x @y @z @s @color;
+    box-shadow: @x @y @z @s @color;
+}
