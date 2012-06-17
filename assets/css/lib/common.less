@@ -1,0 +1,51 @@
+/*
+ *--------------------------------------------------------------
+ * WEBSITE NAME - common.less
+ *
+ * Common elements (reusable custom Class & ID names)
+ * note: edit to suit your needs
+ *
+ *--------------------------------------------------------------
+ */
+
+
+
+/*
+ *--------------------------------------------------------------
+ * NON-SEMANTIC HELPERS
+ * recommended: leave lines below alone
+ *--------------------------------------------------------------
+ */
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+// Hiding content - based on Jonathan Snook http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+.hide {
+	border: 0; 
+	clip: rect(0 0 0 0); 
+	height: 1px; 
+	margin: -1px; 
+	overflow: hidden; 
+	padding: 0; 
+	position: absolute; 
+	width: 1px;
+}
+
+// Focusable hidden content
+.hide.focusable:focus,
+.hide.focusable:active { 
+	clip: auto; 
+	height: auto; 
+	margin: 0; 
+	overflow: visible; 
+	position: static; 
+	width: auto; 
+}
+
+// Hide from both screenreaders and browsers
+.hidden { display: none !important; visibility: hidden; }
+
+// Hide visually, but maintain layout
+.invisible { visibility: hidden; }

@@ -1,0 +1,51 @@
+/*
+ *--------------------------------------------------------------
+ * WEBSITE NAME - foundation.less
+ *
+ * Base stylesheet for html elements
+ * note: edit to suit your needs
+ * recommended: style html tags only
+ *
+ *--------------------------------------------------------------
+ */
+
+
+// Layout
+* { -moz-box-sizing: border-box; box-sizing: border-box;}
+::selection { background:@baseSelectionColor; } 
+::-moz-selection { background:@baseSelectionColor; } 
+
+html { 
+	-webkit-font-smoothing: antialiased; // WebKit font smoothing
+	font-size: 100%; 
+	overflow-y: scroll; 
+	-webkit-text-size-adjust: 100%; 
+	-ms-text-size-adjust: 100%;
+}
+
+body {
+	background: @bodyBg;
+	font: @baseFontSize~"/@{lineHeight} @{baseFontFamily}"; 
+	color: @baseFontColor;
+}
+
+// Improve image quality when scaled in IE7
+img { -ms-interpolation-mode: bicubic; }
+img,
+embed,
+object,
+video { max-width: 100%;}
+
+// Form elements
+select,
+option,
+label,
+input,
+textarea { font-family: ~"@{baseFontFamily}"; }
+
+input,
+textarea { outline: none; }
+textarea { resize: none; }
+
+input[type="submit"],
+button { border: none; }
