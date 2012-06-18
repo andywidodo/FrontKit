@@ -34,6 +34,20 @@ pre, code, kbd, samp {
 	font-size: 1em; 
 }
 
+// Links
+a { color: @linkColor; }
+a:hover { color: @linkColorHover; }
+a:visited { color: @linkColorVisited; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+// Position subscript and superscript content without affecting line-height
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
 img,
 embed,
 object,
