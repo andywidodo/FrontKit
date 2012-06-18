@@ -34,6 +34,9 @@ pre, code, kbd, samp {
 	font-size: 1em; 
 }
 
+hr {}
+
+
 // Links
 a { color: @linkColor; }
 a:hover { color: @linkColorHover; }
@@ -41,6 +44,9 @@ a:visited { color: @linkColorVisited; }
 a:focus { outline: thin dotted; }
 a:hover, a:active { outline: 0; }
 
+
+// Typographic style
+blockquote {}
 q { quotes: none; }
 q:before, q:after { content: ""; content: none; }
 // Position subscript and superscript content without affecting line-height
@@ -48,14 +54,42 @@ sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: b
 sup { top: -0.5em; }
 sub { bottom: -0.25em; }
 
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+ins {}
+mark { font-weight: bold; }
+dfn { font-style: italic; }
+
+
+// Lists
+nav {}
+nav ul {}
+ul, ol {}
+dl {}
+dt {}
+dd {}
+
+
+// Media
 img,
 embed,
 object,
 video { max-width: 100%;}
 // Improve image quality when scaled in IE7
 img { -ms-interpolation-mode: bicubic; }
+svg:not(:root) { overflow: hidden; }
+
+figure { margin: 0; }
+
 
 // Form elements
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+label { cursor: pointer; }
+
 select,
 option,
 label,
@@ -68,5 +102,10 @@ textarea { resize: none; }
 
 input[type="submit"],
 button { border: none; }
+button[disabled], input[disabled] { cursor: default; }
+button, input { line-height: normal; }
 
-svg:not(:root) { overflow: hidden; }
+
+// Table
+table { border-collapse: collapse; border-spacing: 0; }
+
