@@ -5,10 +5,12 @@
  * codename: FrontKit
  * Date: @DATE
  *
+ *
  * LESS - http://lesscss.org
  * jQuery - http://jquery.com
  * Modernizr - http://modernizr.com/
  * HTML5 Boilerplate - http://html5boilerplate.com/
+ *
  * 
  *
  *--------------------------------------------------------------
@@ -499,8 +501,69 @@ body {
   font: 62.5% /1.5 'Helvetica Neue', 'HelveticaNeue', 'Helvetica', Arial, sans-serif;
   color: #000000;
 }
-img {
-  -ms-interpolation-mode: bicubic;
+a {
+  color: #ff0000;
+}
+a:hover {
+  color: #ff6666;
+}
+a:visited {
+  color: #660000;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:hover,
+a:active {
+  outline: 0;
+}
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+/* Improve readability of pre-formatted text in all browsers */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+q {
+  quotes: none;
+}
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+mark {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
 }
 img,
 embed,
@@ -508,11 +571,33 @@ object,
 video {
   max-width: 100%;
 }
+/*Improve image quality when scaled in IE7*/
+img {
+  -ms-interpolation-mode: bicubic;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 0;
+}
+form {
+  margin: 0;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+label {
+  cursor: pointer;
+}
 select,
 option,
 label,
 input,
-textarea {
+textarea,
+button {
   font-family: 'Helvetica Neue', 'HelveticaNeue', 'Helvetica', Arial, sans-serif;
 }
 input,
@@ -526,6 +611,18 @@ input[type="submit"],
 button {
   border: none;
 }
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+button,
+input {
+  line-height: normal;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 /*
  *--------------------------------------------------------------
  *
@@ -538,6 +635,7 @@ button {
  * @mixin text-shadow
  * @mixin box-round (rounded corner box)
  * @mixin box-shadow
+ * @mixin box-gradient
  *
  *
  *--------------------------------------------------------------
@@ -547,6 +645,8 @@ button {
  Font Sizing
  rem sizing based
  @param sizeValue 	: number (desired px size/10)
+ based on rem sizing by Jonathan Snook http://snook.ca/archives/html_and_css/font-size-with-rem
+ note               : the constant number '10' derived from our base font-size 62.5% which is equal to 10 in px measurement.
 
 ----------------------------------------------------------*/
 /*---------------------------------------------------------
@@ -567,11 +667,19 @@ button {
 /*----------------------------------------------------------
 
  Box Shadow
- @param x			: number (X-axis)
- @param y 			: number (Y-axis)
- @param z 			: number (Z-axis)
- @param s 			: number (size/strength of shadow) 
- @param color 		: color (hex, color of shadow)
+ @param x			     : number (X-axis)
+ @param y 			   : number (Y-axis)
+ @param z 			   : number (Z-axis)
+ @param s 			   : number (size/strength of shadow) 
+ @param color 		 : color (hex, color of shadow)
+
+----------------------------------------------------------*/
+/*----------------------------------------------------------
+
+ Box Gradient
+ @param from      : start color (hex)
+ @param to        : end color (hex)
+ @param end       : number (divider of region)
 
 ----------------------------------------------------------*/
 /*
@@ -655,4 +763,13 @@ button {
     filter: none !important;
     -ms-filter: none !important;
   }
+  img {
+    max-width: 100% !important;
+  }
+  a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  /* Don't show links for images, or javascript/internal links */
 }
