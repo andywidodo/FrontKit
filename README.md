@@ -1,4 +1,4 @@
-# FrontKit
+# [FrontKit](https://github.com/andywidodo/FrontKit)
 FrontKit is a Front-end Development Kit
 
 ## Quick Start
