@@ -1,0 +1,116 @@
+/*
+ *--------------------------------------------------------------
+ * WEBSITE NAME - Main Stylesheet
+ *
+ * codename: FrontKit
+ * Date: @DATE
+ *
+ *
+ * LESS - http://lesscss.org
+ * jQuery - http://jquery.com
+ * Modernizr - http://modernizr.com/
+ * HTML5 Boilerplate - http://html5boilerplate.com/
+ *
+ * 
+ *
+ *--------------------------------------------------------------
+ */
+
+
+
+// Normalize
+@import "lib/normalize.less";
+
+
+// Variables
+@import "lib/variables.less";
+
+
+// Base stylesheets
+@import "lib/foundation.less";
+
+
+// Mixins
+@import "lib/mixins.less";
+
+
+// Common elements
+@import "lib/common.less";
+
+
+/*
+ *--------------------------------------------------------------
+ * PAGE LAYOUT
+ * Customization starts here
+ *--------------------------------------------------------------
+ */
+
+
+// Header
+
+
+// Body
+
+
+// Pages
+
+
+// Footer
+
+
+
+
+
+/*
+ *--------------------------------------------------------------
+ * MEDIA QUERIES
+ * Modify as content requires
+ *--------------------------------------------------------------
+ */
+
+/* MOBILE PORTRAIT */
+ @media screen and (min-width: 320px) {
+
+ }
+
+ /* MOBILE LANDSCAPE */
+@media  screen and (min-width: 480px) {
+
+}
+
+/* SMALL TABLET */
+@media screen and (min-width: 600px) {
+}
+
+/* TABLET/NETBOOK */
+@media screen and (min-width: 768px) { 
+}
+
+/* LANDSCAPE TABLET/NETBOOK/LAPTOP */
+@media screen and (min-width: 1024px) { 
+}
+
+@media screen and (min-width: 1280px) { 
+}
+
+
+
+
+/*
+ *--------------------------------------------------------------
+ * PRINT
+ *--------------------------------------------------------------
+ */
+
+@media print {
+	* { 
+		background: transparent !important; 
+		color: black !important; 
+		box-shadow:none !important; 
+		text-shadow: none !important; 
+		filter:none !important;
+		 -ms-filter: none !important; 
+	}	
+	img { max-width: 100% !important; }
+	a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+}

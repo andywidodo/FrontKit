@@ -5,7 +5,7 @@
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-	<title>Frontend</title>
+	<title>FrontKit</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 	<meta charset="utf-8" />
 	<meta name="description" content="" />	
@@ -18,22 +18,60 @@
 	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />	
 	<!--modernizr-->
 	<script src="assets/js/lib/modernizr-2.5.3.min.js"></script>
+
 </head>
 <body>
-	<header>
-		<h1>FrontKit</h1>
-		<h2>Front-end Development Kit</h2>
-	</header>
-	<div class="main" role="main">
-		<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem: <dfn>rerum facilis est et expedita</dfn> distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. <mark>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae</mark>. <ins>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat</ins>.</p>
-
-		<pre>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</pre>
-		
-		<code>Duis aute irure dolor in reprehenderit in voluptate velit </code>
+	<div class="navbar clearfix">
+		<nav>
+			<ul class="clearfix">
+				<li class="home"><a class="active" href="index.html">Home</a>
+				<li><a href="layout.html">Layout</a></li>
+				<li><a href="css.html">Base CSS</a></li>				
+				<li><a href="components.html">Components</a></li>
+				<li><a href="js.html">JavaScript</a></li>
+				<li><a href="less.html">LESS</a></li>
+			</ul>
+		</nav>
+	</div>	
+	<hr class="hide">
+	<div class="main clearfix" role="main" id="page-index">
+		<header>
+			<h1>FrontKit</h1>
+			<h2>Front-end Development Kit</h2>
+		</header>
+		<section id="global-section" class="page-section clearfix">
+			<div class="section-header">
+				<h1>Global</h1>
+			</div>
+			<div class="row">
+				<div class="fourcol">
+					<h2>What is FrontKit?</h2>
+					<p>FrontKit is a web front-end development kit created to assist you to develop the front-end aspects of your web development projects.</p>
+				</div>
+				<div class="fourcol">
+					<h2>Requirements</h2>
+					<p>FrontKit's HTML and CSS properties requires HTML5 doctype. FrontKit also makes use of:</p>
+					<ul>
+						<li><a href="http://jquery.com">jQuery</a></li>
+						<li><a href="http://lesscss.org">LESS</a></li>
+						<li><a href="http://modernizr.com">Modernizr</a></li>
+					</ul>
+				</div>
+				<div class="fourcol last">
+					<h2>Acknowledgements</h2>
+					<p>FrontKit also inspired from and makes use of:</p>
+					<ul>
+						<li><a href="#">HTML5 Boilerplate</a></li>
+						<li><a href="#">Normalize.css</a></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<!--/Global-->
+		<footer>
+			&copy; 2012 - FrontKit: A Front-end Development Kit
+		</footer>
 	</div>
-	<footer>
-		&copy; 2012 
-	</footer>
 
 	<!-- jQuery loader & CDN fallback -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>

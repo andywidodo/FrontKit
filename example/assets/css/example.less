@@ -1,0 +1,246 @@
+/*
+ *--------------------------------------------------------------
+ * FrontKit Example - Main Stylesheet
+ *
+ * codename: FrontKit
+ * Date: @DATE
+ *
+ *
+ * LESS - http://lesscss.org
+ * jQuery - http://jquery.com
+ * Modernizr - http://modernizr.com/
+ * HTML5 Boilerplate - http://html5boilerplate.com/
+ *
+ * 
+ *
+ *--------------------------------------------------------------
+ */
+
+
+
+// Normalize
+@import "lib/normalize.less";
+
+
+// Variables
+@import "lib/variables.less";
+
+
+// Mixins
+@import "lib/mixins.less";
+
+
+// Base stylesheets
+@import "lib/foundation.less";
+
+
+// Common elements
+@import "lib/common.less";
+
+
+/*
+ *--------------------------------------------------------------
+ * PAGE LAYOUT
+ * Customization starts here
+ *
+ *--------------------------------------------------------------
+ */
+
+// Global Grid System (based on 1140px grid system)
+.container { padding: 0 20px;}
+.row, .main {
+	width: 100%;
+	max-width: 1140px;
+	min-width: 755px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.navbar {
+	width: 100%;
+	min-width: 755px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+
+.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol {
+	margin-right: 3.8%;
+	float: left;
+	min-height: 1px;
+}
+
+.row {
+	.onecol { width: 4.85%; }
+	.twocol { width: 13.45%; }
+	.threecol { width: 22.05%; }
+	.fourcol { width: 30.75%; }
+	.fivecol { width: 39.45%; }
+	.sixcol { width: 48%; }
+	.sevencol { width: 56.75%; }
+	.eightcol { width: 65.4%; }
+	.ninecol { width: 74.05%; }
+	.tencol { width: 82.7%; }
+	.elevencol { width: 91.35%; }
+	.twelvecol { width: 100%; float: left; }
+
+	.grid {
+		.box-round(3px);
+		background: #efefef;
+		padding: 3px;
+		text-align: center;
+	}
+}
+.gridrow { margin-bottom: 10px;}
+
+
+.last {
+margin-right: 0px;
+}
+
+// Navbar
+.navbar {
+	.box-gradient(#222, #000, 2);
+	padding: 0 50px;
+	nav {
+		float: left;
+		display: block;
+		ul {
+			width: 600px;
+			li {
+				text-align: center;
+				a {
+					display: block;
+					float: left;
+					margin: 0;
+					padding: 10px;
+					color: #666;
+					text-decoration: none;
+					&.active,
+					&:hover {
+						color: #fff;
+						background: #000;
+					}
+				}
+				&.home a { 
+					width: 20px;
+					height: 19px;
+					margin: 10px 12px 0 0;
+					overflow: hidden;
+					position: relative;
+					display: block;
+					float: left;
+					padding: 0;
+					&:before {
+						margin: -19px 0 0;
+						content: url(../images/icon-home.png);
+						line-height: 0;
+						font-size: 0;
+						display: inline-block;
+					}
+					&:hover:before,
+					&.active:before{ margin: 0; }
+				}
+			}
+		}
+	}
+}
+
+// Body
+.main {
+	header {
+		margin: 0 0 40px;
+		h1 { 
+			margin-bottom: 0;
+			.font-size(40);
+		}
+		h2 { 
+			font-weight: normal;
+			margin: 0;
+		}
+	}
+	section {
+		padding: 0;
+		&.page-section {
+			margin: 0 0 40px;
+		}
+		.section-header { 
+			border-bottom: solid 1px #ececec; 
+			padding: 0;
+			margin: 0 0 1em;
+			h1 { margin: 0; .font-size(24); }
+		}
+		.row {
+			h2 { 
+				margin: 0; 
+				.font-size(18); 
+				font-weight: normal;
+			}
+		}
+	}
+}
+
+// Pages
+
+
+// Footer
+footer {
+	.font-size(11);
+	padding: 1em 0;
+	border-top: solid 1px #efefef;
+}
+
+
+
+
+
+/*
+ *--------------------------------------------------------------
+ * MEDIA QUERIES
+ * Modify as content requires
+ *--------------------------------------------------------------
+ */
+
+ @media screen and (max-width: 320px) {
+ 	.main { padding: 0 20px;}
+ }
+
+ @media screen and (max-width: 768px) {
+ 	.navbar { padding:0 5px;}
+ 	.row, body, .container, .main, .navbar {
+	width: 100%;
+	min-width: 0;
+	margin: 0;
+	padding: 0;
+	}
+	.main, .row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol {
+	width: auto;
+	float: none;
+	//margin: 0;
+	//padding: 0;
+	}
+	
+ }
+
+
+
+
+
+/*
+ *--------------------------------------------------------------
+ * PRINT
+ *--------------------------------------------------------------
+ */
+
+@media print {
+	* { 
+		background: transparent !important; 
+		color: black !important; 
+		box-shadow:none !important; 
+		text-shadow: none !important; 
+		filter:none !important;
+		 -ms-filter: none !important; 
+	}	
+	img { max-width: 100% !important; }
+	a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+}
