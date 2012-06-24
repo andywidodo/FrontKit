@@ -571,13 +571,14 @@ hr {
   height: 0;
 }
 a {
-  color: #ff0000;
+  color: #0088cc;
+  text-decoration: none;
 }
 a:hover {
-  color: #ff6666;
+  color: #005580;
 }
 a:visited {
-  color: #660000;
+  color: #9ebccb;
 }
 a:focus {
   outline: thin dotted;
@@ -626,6 +627,10 @@ samp {
   font-family: monospace, serif;
   _font-family: 'courier new', monospace;
   font-size: 1em;
+}
+small {
+  font-size: 11px;
+  font-size: 0.7857142857142857rem;
 }
 /* Improve readability of pre-formatted text in all browsers */
 pre {
@@ -789,22 +794,21 @@ table {
  *
  *--------------------------------------------------------------
  */
-.container {
-  padding: 0 20px;
-}
 .row,
-.main {
-  width: 100%;
-  max-width: 1140px;
-  min-width: 755px;
-  margin: 0 auto;
-  overflow: hidden;
-}
+.main,
 .navbar {
   width: 100%;
   min-width: 755px;
   margin: 0 auto;
   overflow: hidden;
+}
+.row,
+.main {
+  max-width: 1140px;
+}
+.main {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .onecol,
 .twocol,
@@ -816,49 +820,155 @@ table {
 .eightcol,
 .ninecol,
 .tencol,
-.elevencol {
-  margin-right: 3.8%;
+.elevencol,
+.twelvecol,
+.thirteencol,
+.fourteencol,
+.fifteencol,
+.sixteencol {
   float: left;
-  min-height: 1px;
+}
+.row-fluid .onecol,
+.row-fluid .twocol,
+.row-fluid .threecol,
+.row-fluid .fourcol,
+.row-fluid .fivecol,
+.row-fluid .sixcol,
+.row-fluid .sevencol,
+.row-fluid .eightcol,
+.row-fluid .ninecol,
+.row-fluid .tencol,
+.row-fluid .elevencol,
+.row-fluid .twelvecol,
+.row-fluid .thirteencol,
+.row-fluid .fourteencol,
+.row-fluid .fifteencol,
+.row-fluid .sixteencol {
+  margin-right: 1.82%;
+}
+.row-fluid .onecol {
+  width: 4.55%;
+}
+.row-fluid .twocol {
+  width: 10.92%;
+}
+.row-fluid .threecol {
+  width: 17.27%;
+}
+.row-fluid .fourcol {
+  width: 23.64%;
+}
+.row-fluid .fivecol {
+  width: 30%;
+}
+.row-fluid .sixcol {
+  width: 36.36%;
+}
+.row-fluid .sevencol {
+  width: 42.73%;
+}
+.row-fluid .eightcol {
+  width: 49.09%;
+}
+.row-fluid .ninecol {
+  width: 55.45%;
+}
+.row-fluid .tencol {
+  width: 61.82%;
+}
+.row-fluid .elevencol {
+  width: 68.18%;
+}
+.row-fluid .twelvecol {
+  width: 74.55%;
+}
+.row-fluid .thirteencol {
+  width: 80.90%;
+}
+.row-fluid .fourteencol {
+  width: 87.27%;
+}
+.row-fluid .fifteencol {
+  width: 93.64%;
+}
+.row-fluid .sixteencol {
+  width: 100%;
+}
+.row .onecol,
+.row .twocol,
+.row .threecol,
+.row .fourcol,
+.row .fivecol,
+.row .sixcol,
+.row .sevencol,
+.row .eightcol,
+.row .ninecol,
+.row .tencol,
+.row .elevencol,
+.row .twelvecol,
+.row .thirteencol,
+.row .fourteencol,
+.row .fifteencol,
+.row .sixteencol {
+  margin-right: 20px;
 }
 .row .onecol {
-  width: 4.85%;
+  width: 50px;
 }
 .row .twocol {
-  width: 13.45%;
+  width: 120px;
 }
 .row .threecol {
-  width: 22.05%;
+  width: 190px;
 }
 .row .fourcol {
-  width: 30.75%;
+  width: 260px;
 }
 .row .fivecol {
-  width: 39.45%;
+  width: 330px;
 }
 .row .sixcol {
-  width: 48%;
+  width: 400px;
 }
 .row .sevencol {
-  width: 56.75%;
+  width: 470px;
 }
 .row .eightcol {
-  width: 65.4%;
+  width: 540px;
 }
 .row .ninecol {
-  width: 74.05%;
+  width: 610px;
 }
 .row .tencol {
-  width: 82.7%;
+  width: 680px;
 }
 .row .elevencol {
-  width: 91.35%;
+  width: 750px;
 }
 .row .twelvecol {
-  width: 100%;
-  float: left;
+  width: 820px;
 }
-.row .grid {
+.row .thirteencol {
+  width: 890px;
+}
+.row .fourteencol {
+  width: 960px;
+}
+.row .fifteencol {
+  width: 1030px;
+}
+.row .sixteencol {
+  width: 1100px;
+}
+.gridrow {
+  margin-bottom: 20px;
+}
+.row,
+.row-fluid {
+  overflow: hidden;
+}
+.row .grid,
+.row-fluid .grid {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -866,20 +976,52 @@ table {
   padding: 3px;
   text-align: center;
 }
-.gridrow {
-  margin-bottom: 10px;
-}
-.last {
+.row .last,
+.row-fluid .last {
   margin-right: 0px;
 }
+/*.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol {
+	margin-right: 3.8%;
+	float: left;
+	min-height: 1px;
+}
+
+.row {
+	.onecol { width: 4.85%; }
+	.twocol { width: 13.45%; }
+	.threecol { width: 22.05%; }
+	.fourcol { width: 30.75%; }
+	.fivecol { width: 39.45%; }
+	.sixcol { width: 48%; }
+	.sevencol { width: 56.75%; }
+	.eightcol { width: 65.4%; }
+	.ninecol { width: 74.05%; }
+	.tencol { width: 82.7%; }
+	.elevencol { width: 91.35%; }
+	.twelvecol { width: 100%; float: left; }
+
+	.grid {
+		.box-round(3px);
+		background: #efefef;
+		padding: 3px;
+		text-align: center;
+	}
+}
+
+
+
+.last {
+margin-right: 0px;
+}
+*/
 .navbar {
-  background-color: #111111;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#222222), to(#000000));
-  background-image: -webkit-linear-gradient(top, #222222, #000000);
-  background-image: -moz-linear-gradient(top, #222222, #000000);
-  background-image: -ms-linear-gradient(top, #222222, #000000);
-  background-image: -o-linear-gradient(top, #222222, #000000);
-  background-image: linear-gradient(top, #222222, #000000);
+  background-color: #222222;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#434343), to(#000000));
+  background-image: -webkit-linear-gradient(top, #434343, #000000);
+  background-image: -moz-linear-gradient(top, #434343, #000000);
+  background-image: -ms-linear-gradient(top, #434343, #000000);
+  background-image: -o-linear-gradient(top, #434343, #000000);
+  background-image: linear-gradient(top, #434343, #000000);
   padding: 0 50px;
 }
 .navbar nav {
@@ -951,14 +1093,20 @@ table {
 }
 .main section .section-header h1 {
   margin: 0;
-  font-size: 24px;
-  font-size: 1.7142857142857142rem;
+  font-size: 28px;
+  font-size: 2rem;
 }
+.main section .section-header h1 small {
+  font-size: 12px;
+  font-size: 0.8571428571428571rem;
+  color: #666;
+  font-weight: normal;
+}
+.main section .row-fluid h2,
 .main section .row h2 {
   margin: 0;
   font-size: 18px;
   font-size: 1.2857142857142858rem;
-  font-weight: normal;
 }
 footer {
   font-size: 11px;
@@ -988,8 +1136,6 @@ footer {
   .navbar {
     width: 100%;
     min-width: 0;
-    margin: 0;
-    padding: 0;
   }
   .main,
   .row .onecol,
