@@ -6,7 +6,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="UTF-8">
-	<title>FrontKit -  Layout</title>
+	<title>FrontKit - Layout</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 	<meta charset="utf-8" />
 	<meta name="description" content="" />	
@@ -44,22 +44,20 @@
 				<h1>Layout Basics</h1>
 			</div>
 			<div class="row">
-				<div class="fourcol">
-					<h2>Doctype</h2>
-					<p>FrontKit's HTML and CSS properties require HTML5 doctype.</p>
-					<code>
-						&lt;!DOCTYPE html&gt;
-						&lt;html lang="en"&gt;
-						..
-						&lt;/html&gt;
-					</code>
-				</div>
-				<div class="fourcol">
+				<div class="eightcol">
 					<h2>Fixed &amp; Fluid Grid Layout</h2>
 					<p>The default grid system utilizes 16 columns grid, with <code>max-width</code> for the fluid grid sets to 1140px (includes 20px padding wrapper).</p>
+					<p>In order to use the fixed grid layout, please use: <code>&lt;div class="row"&gt;&hellip;&lt;/div&gt;</code>. While the fluid grid layout can be deployed by using <code>&lt;div class="row-fluid"&gt;</code>.</p>
 				</div>
-				<div class="fourcol last">
+				<div class="eightcol last">
 					<h2>Responsive Design</h2>
+					<p>The default breakpoints for responsive design are:</p>
+					<ul>
+						<li><code>max-width: 320px</code>. For devices with maximum width of 320px (portrait orientation in iPhone).</li>
+						<li><code>max-width: 480px</code>. For devices with maximum width of 480px (landscape orientation in iPhone).</li>
+						<li><code>max-width: 768px</code>. For devices with maximum width of 768px (e.g. iPads orientation portrait and other tablets).</li>
+						<li><code>max-width: 1024px</code>. For devices with maximum width of 1024px (e.g. iPads, tablets orientation landscape and netbooks).</li>
+					</ul>
 				</div>
 			</div>
 		</section>

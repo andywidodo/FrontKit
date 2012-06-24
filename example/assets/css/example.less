@@ -57,12 +57,13 @@
 	margin: 0 auto;
 	overflow: hidden;
 }
+
 .row, .main { max-width: 1140px; }
+
 .main {
 	padding-left: 20px;
 	padding-right: 20px;
 }
-
 
 .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol, .thirteencol, .fourteencol, .fifteencol, .sixteencol {
 	float: left;
@@ -129,40 +130,6 @@
 	}
 }
 
-/*.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol {
-	margin-right: 3.8%;
-	float: left;
-	min-height: 1px;
-}
-
-.row {
-	.onecol { width: 4.85%; }
-	.twocol { width: 13.45%; }
-	.threecol { width: 22.05%; }
-	.fourcol { width: 30.75%; }
-	.fivecol { width: 39.45%; }
-	.sixcol { width: 48%; }
-	.sevencol { width: 56.75%; }
-	.eightcol { width: 65.4%; }
-	.ninecol { width: 74.05%; }
-	.tencol { width: 82.7%; }
-	.elevencol { width: 91.35%; }
-	.twelvecol { width: 100%; float: left; }
-
-	.grid {
-		.box-round(3px);
-		background: #efefef;
-		padding: 3px;
-		text-align: center;
-	}
-}
-
-
-
-.last {
-margin-right: 0px;
-}
-*/
 
 // Navbar
 .navbar {
@@ -211,6 +178,7 @@ margin-right: 0px;
 		}
 	}
 }
+
 
 // Body
 .main {
@@ -276,12 +244,18 @@ footer {
  *--------------------------------------------------------------
  */
 
+// iPhone orientation portrait
  @media screen and (max-width: 320px) {
- 	.main { padding: 0 20px;}
+ 	//.main { padding: 0 20px;}
  }
 
- @media screen and (max-width: 768px) {
+// iPhone orientation landscape
+ @media screen and (max-width: 480px) {
 
+ }
+
+// iPads and tablets orientation portrait
+ @media screen and (max-width: 768px) {
  	.navbar { padding:0 5px;}
  	.row, body, .container, .main, .navbar {
 	width: 100%;
@@ -295,6 +269,10 @@ footer {
 	//margin: 0;
 	//padding: 0;
 	}
+ }
+
+// iPads, tablets orientation landscape and netbooks
+ @media screen and (max-width: 1024px) {
 
  }
 
