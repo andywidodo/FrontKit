@@ -44,12 +44,12 @@
 				<h1>Layout Basics</h1>
 			</div>
 			<div class="row">
-				<div class="eightcol">
+				<div class="col8">
 					<h2>Fixed &amp; Fluid Grid Layout</h2>
 					<p>The default grid system utilizes 16 columns grid, with <code>max-width</code> for the fluid grid sets to 1140px (includes 20px padding wrapper).</p>
 					<p>In order to use the fixed grid layout, please use: <code>&lt;div class="row"&gt;&hellip;&lt;/div&gt;</code>. While the fluid grid layout can be deployed by using <code>&lt;div class="row-fluid"&gt;</code>.</p>
 				</div>
-				<div class="eightcol last">
+				<div class="col8">
 					<h2>Responsive Design</h2>
 					<p>The default breakpoints for responsive design are:</p>
 					<ul>
@@ -62,83 +62,204 @@
 			</div>
 		</section>
 		<!--/globalstyle-section-->
-		<section id="gridlayout-section" class="page-section clearfix">
+		<section id="fixedgrid-section" class="page-section clearfix">
 			<div class="section-header">
-				<h1>Fluid grid system <small>(with responsive)</small></h1>
-			</div>
-			<div class="row-fluid">
-				<div class="onecol grid gridrow"><span>1</span></div>
-				<div class="onecol grid gridrow"><span>1</span></div>
-				<div class="onecol grid gridrow"><span>1</span></div>
-				<div class="onecol grid gridrow"><span>1</span></div>
-				<div class="onecol grid gridrow"><span>1</span></div>
-				<div class="onecol grid gridrow"><span>1</span></div>
-				<div class="onecol grid gridrow"><span>1</span></div>
-				<div class="onecol grid gridrow"><span>1</span></div>
-				<div class="onecol grid gridrow"><span>1</span></div>
-				<div class="onecol grid gridrow"><span>1</span></div>
-				<div class="onecol grid gridrow"><span>1</span></div>
-				<div class="onecol grid gridrow"><span>1</span></div>
-				<div class="onecol grid gridrow"><span>1</span></div>
-				<div class="onecol grid gridrow"><span>1</span></div>
-				<div class="onecol grid gridrow"><span>1</span></div>
-				<div class="onecol grid gridrow last"><span>1</span></div>
-			</div>
-			<div class="row-fluid">
-				<div class="onecol grid gridrow"><span>1</span></div>
-				<div class="fifteencol grid gridrow last"><span>15</span></div>
-			</div>
-			<div class="row-fluid">
-				<div class="twocol grid gridrow"><span>2</span></div>
-				<div class="twocol grid gridrow"><span>2</span></div>
-				<div class="twocol grid gridrow"><span>2</span></div>
-				<div class="twocol grid gridrow"><span>2</span></div>
-				<div class="twocol grid gridrow"><span>2</span></div>
-				<div class="twocol grid gridrow"><span>2</span></div>
-				<div class="twocol grid gridrow"><span>2</span></div>
-				<div class="twocol grid gridrow last"><span>2</span></div>
-			</div>
-			<div class="row-fluid">
-				<div class="twocol grid gridrow"><span>2</span></div>
-				<div class="fourteencol grid gridrow last"><span>14</span></div>
-			</div>
-			<div class="row-fluid">
-				<div class="threecol grid gridrow"><span>3</span></div>
-				<div class="thirteencol grid gridrow last"><span>13</span></div>
-			</div>
-			<div class="row-fluid">
-				<div class="fourcol grid gridrow"><span>4</span></div>
-				<div class="fourcol grid gridrow"><span>4</span></div>
-				<div class="fourcol grid gridrow"><span>4</span></div>
-				<div class="fourcol grid gridrow last"><span>4</span></div>
-			</div>
-			<div class="row-fluid">
-				<div class="fourcol grid gridrow"><span>4</span></div>
-				<div class="twelvecol grid gridrow last"><span>12</span></div>
-			</div>
-			<div class="row-fluid">
-				<div class="fivecol grid gridrow"><span>5</span></div>
-				<div class="elevencol grid gridrow last"><span>11</span></div>
-			</div>
-			<div class="row-fluid">
-				<div class="sixcol grid gridrow"><span>6</span></div>
-				<div class="tencol grid gridrow last"><span>10</span></div>
-			</div>
-			<div class="row-fluid">
-				<div class="sevencol grid gridrow"><span>7</span></div>
-				<div class="ninecol grid gridrow last"><span>9</span></div>
-			</div>
-			<div class="row-fluid">
-				<div class="eightcol grid gridrow"><span>8</span></div>
-				<div class="eightcol grid gridrow last"><span>8</span></div>
-			</div>
-			<div class="row-fluid">
-				<div class="sixteen grid last"><span>16</span></div>
+				<h1>Fixed grid system <small>(fixed 16-column grid with responsive)</small></h1>
 			</div>
 			<div class="row">
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+			</div>
+			<div class="row">
+				<span class="col2 grid gridrow">2</span>
+				<span class="col2 grid gridrow">2</span>
+				<span class="col2 grid gridrow">2</span>
+				<span class="col2 grid gridrow">2</span>
+				<span class="col2 grid gridrow">2</span>
+				<span class="col2 grid gridrow">2</span>
+				<span class="col2 grid gridrow">2</span>
+				<span class="col2 grid gridrow">2</span>
+			</div>
+			<div class="row">
+				<span class="col2 grid gridrow">2</span>
+				<span class="col14 grid gridrow">14</span>
+			</div>
+			<div class="row">
+				<span class="col3 grid gridrow">3</span>
+				<span class="col13 grid gridrow">13</span>
+			</div>
+			<div class="row">
+				<span class="col4 grid gridrow">4</span>
+				<span class="col4 grid gridrow">4</span>
+				<span class="col4 grid gridrow">4</span>
+				<span class="col4 grid gridrow">4</span>
+			</div>
+			<div class="row">
+				<span class="col4 grid gridrow">4</span>
+				<span class="col12 grid gridrow">12</span>
+			</div>
+			<div class="row">
+				<span class="col5 grid gridrow">5</span>
+				<span class="col11 grid gridrow">11</span>
+			</div>
+			<div class="row">
+				<span class="col6 grid gridrow">6</span>
+				<span class="col10 grid gridrow">10</span>
+			</div>
+			<div class="row">
+				<span class="col7 grid gridrow">7</span>
+				<span class="col9 grid gridrow">9</span>
+			</div>
+			<div class="row">
+				<span class="col8 grid gridrow">8</span>
+				<span class="col8 grid gridrow">8</span>
+			</div>
+			<div class="row">
+				<span class="col16 grid gridrow">16</span>
 			</div>
 		</section>
-		<!--/gridlayout-section-->
+		<!--/fixedgrid-section-->
+		<section id="nestedfixed-section" class="page-section clearfix">
+			<div class="section-header">
+				<h1>Nesting fixed columns</h1>
+			</div>
+			<div class="row">
+				<div class="col8">
+					<div class="row">
+						<div class="col8 grid bg-darkgrey">
+							8
+							<div class="row">
+								<div class="col4 grid">4</div>
+								<div class="col4 grid">4</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col8">
+					<p>Nested rows should consist of a set of columns which add up the number of its parent's column.</p>
+				</div>
+			</div>
+		</section>
+		<!--/nestedfixed-section-->
+		<section id="fluidgrid-section" class="page-section clearfix">
+			<div class="section-header">
+				<h1>Fluid grid system <small>(responsive percent based layout)</small></h1>
+			</div>
+			<div class="row-fluid">
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+				<span class="col1 grid gridrow">1</span>
+			</div>
+			<div class="row-fluid">
+				<span class="col2 grid gridrow">2</span>
+				<span class="col2 grid gridrow">2</span>
+				<span class="col2 grid gridrow">2</span>
+				<span class="col2 grid gridrow">2</span>
+				<span class="col2 grid gridrow">2</span>
+				<span class="col2 grid gridrow">2</span>
+				<span class="col2 grid gridrow">2</span>
+				<span class="col2 grid gridrow">2</span>
+			</div>
+			<div class="row-fluid">
+				<span class="col2 grid gridrow">2</span>
+				<span class="col14 grid gridrow">14</span>
+			</div>
+			<div class="row-fluid">
+				<span class="col3 grid gridrow">3</span>
+				<span class="col13 grid gridrow">13</span>
+			</div>
+			<div class="row-fluid">
+				<span class="col4 grid gridrow">4</span>
+				<span class="col4 grid gridrow">4</span>
+				<span class="col4 grid gridrow">4</span>
+				<span class="col4 grid gridrow">4</span>
+			</div>
+			<div class="row-fluid">
+				<span class="col4 grid gridrow">4</span>
+				<span class="col12 grid gridrow">12</span>
+			</div>
+			<div class="row-fluid">
+				<span class="col5 grid gridrow">5</span>
+				<span class="col11 grid gridrow">11</span>
+			</div>
+			<div class="row-fluid">
+				<span class="col6 grid gridrow">6</span>
+				<span class="col10 grid gridrow">10</span>
+			</div>
+			<div class="row-fluid">
+				<span class="col7 grid gridrow">7</span>
+				<span class="col9 grid gridrow">9</span>
+			</div>
+			<div class="row-fluid">
+				<span class="col8 grid gridrow">8</span>
+				<span class="col8 grid gridrow">8</span>
+			</div>
+			<div class="row-fluid">
+				<span class="col16 grid gridrow">16</span>
+			</div>
+		</section>
+		<!--/fluidgrid-section-->
+		<section id="nestedfluid-section" class="page-section clearfix">
+			<div class="section-header">
+				<h1>Nesting fluid columns</h1>
+			</div>
+			<div class="row-fluid">
+				<div class="col8">
+					<div class="row-fluid">
+						<div class="col16 grid bg-darkgrey shift">
+									16
+							<div class="row-fluid">
+								<div class="col8 grid">8</div>
+								<div class="col8 grid">8</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col8">
+					<p>Nesting columns can be done by</p>
+					<code>
+						&lt;div class="col8"&gt;
+							&lt;div class="col4"&gt;&lt;/div&gt;
+							&lt;div class="col4"&gt;&lt;/div&gt;
+						&lt;/div&gt;
+					</code>
+				</div>
+			</div>
+		</section>
+		<!--/nestedfluid-section-->
+		<section id="gridcustomization-section" class="page-section clearfix">
+			<div class="section-header">
+				<h1>Grid Customization</h1>
+			</div>
+		</section>
+		<!--/gridcustomization-section-->
 		<footer>
 			&copy; 2012 - FrontKit: A Front-end Development Kit
 		</footer>

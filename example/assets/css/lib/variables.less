@@ -11,6 +11,22 @@
 
 
 
+// Grid & Layout
+@maxWidth : 1140; 
+@maxWidthPX : @maxWidth+0px; //converting to px
+@minWidth : 755;
+@minWidthPX : @minWidth+0px; //converting to px
+@gridCol : 16;
+@fixedgridColWidthPX : 50px; // need to set this value if you're using fixed grid layout
+@gridGutterWidth : 20;
+@gridGutterWidthPX : @gridGutterWidth+0px; //converting to px
+@gridGutterWidthPercent : (@gridGutterWidth / @actualWidth) * 100%;
+@containerGutter : 20; 
+@containerGutterPX : @containerGutter+0px; //converting to px
+@actualWidth : @maxWidth - (@containerGutter * 2);
+@actualWidthPX : @actualWidth+0px; //converting to px
+
+
 // Body background
 @bodyBg : #fff;
 
@@ -18,13 +34,13 @@
 @baseSelectionColor : #c00;
 
 // Default links color
-@linkColor : #08c;
-@linkColorHover : #005580;
-@linkColorVisited : #9ebccb;
+@linkColor : #39c;
+@linkColorHover : darken(@linkColor, 20%);
+@linkColorVisited : lighten(@linkColor, 15%);
 
 // Typographic settings
 @baseFontColor : #333;
-/*62.5%=10px, 75% = 12px, 87.5% = 14px, 100% = 16px*/
+/* 62.5%=10px, 75% = 12px, 87.5% = 14px, 100% = 16px, etc */
 @baseFontSize : 87.5%; 
 @baseFontSizePX : 14;
 @lineHeight : 1.5;
@@ -32,3 +48,4 @@
 
 
 // Colors
+@darkGrey : #666;

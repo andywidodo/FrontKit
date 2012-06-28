@@ -1,12 +1,13 @@
 /*
  *--------------------------------------------------------------
  *
- * CSS3 LESS Mixins
+ * LESS Mixins
  *
  * LESS Mixins for projects with CSS3 & LESS
  * http://lesscss.org
  *
  * @mixin font-size (rem & px based)
+ * @mixin font
  * @mixin text-shadow
  * @mixin box-round (rounded corner box)
  * @mixin box-shadow
@@ -32,14 +33,125 @@
 
 ----------------------------------------------------------*/
 .font-size(@sizeValue){
-  //@remValue: @sizeValue;
-  //@pxValue: (@sizeValue * @baseFontSizePX);
-  //font-size: ~"@{pxValue}px";
-  //font-size: ~"@{remValue}rem";
   font-size: ~"@{sizeValue}px";
   @remValue: (@sizeValue / @baseFontSizePX);
   font-size: ~"@{remValue}rem";
 }
+
+
+
+/*----------------------------------------------------------
+
+ Typographic Mixins
+ Define the font-family easier, from sans-serif, serif to monospace.
+
+----------------------------------------------------------*/
+#font {
+  #family {
+    .sans-serif() {
+      font-family: 'Helvetica Neue', 'HelveticaNeue', 'Helvetica', Arial, sans-serif;
+    }
+    .serif() {
+      font-family: 'Georgia', 'Times New Roman', Times, serif;
+    }
+    .monospace() {
+      font-family: monospace, serif; _font-family: 'courier new', monospace; 
+    }    
+  }
+}
+
+
+
+/*----------------------------------------------------------
+
+ Grid
+
+----------------------------------------------------------*/
+#grid {
+  // Fixed grid
+  .fixed () {
+    .colX(@index) when (@index > 0) {
+        (~".col@{index}") { .col(@index); }
+        .colX (@index - 1);
+    }
+    .colX(0) {}
+
+    .col (@columns) {
+       .gridColWidth(@columns);       
+    }
+
+    .gridColWidth (@columns) {
+      width: (@columns * ((@actualWidthPX - (@gridGutterWidthPX * (@gridCol - 1))) / @gridCol )) + ((@columns * @gridGutterWidthPX) - @gridGutterWidthPX);
+    }
+
+    .colX(@gridCol);
+  }
+  // Fluid grid
+  .fluid () {
+    .colX(@index) when (@index > 0) {
+        (~"> .col@{index}") { .col(@index); }
+        .colX (@index - 1);
+    }
+    .colX(0) {}
+
+    .col (@columns) {
+       .gridColWidth(@columns);       
+    }
+
+    .gridColWidth (@columns) {
+      @gridWidth : (@columns * ((@actualWidth - (@gridGutterWidth * (@gridCol - 1))) / @gridCol )) + ((@columns * @gridGutterWidth) - @gridGutterWidth);
+      width: (@gridWidth/@actualWidth) * 100% ;
+    }
+
+    .row-fluid {
+      width: 100%;
+      .colX(@gridCol);
+    }
+    
+  }
+  // Grid row
+ .rows() {
+    .row-fluid,
+    .row {
+      overflow: hidden;
+      // show grid
+      .grid {
+        .box-round(3px);
+        background: #efefef;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        text-align: center;
+      }
+      // optionals
+      .bg-darkgrey { background: @darkGrey; }
+      .gridrow { margin-bottom: 20px; }
+      // eof show grid
+      > [class*="col"] {
+        float: left;
+      }
+      > [class*="col"]:last-child { margin-right: 0; }
+    }
+    .row-fluid {
+      > [class*="col"] {
+        margin-right: @gridGutterWidthPercent;
+      }
+    } 
+    .row { 
+      max-width: @maxWidthPX; 
+      > [class*="col"] {
+        margin-right: @gridGutterWidthPX;
+      }
+    }
+  }
+  // Offset
+  .offset() {
+    .shift {
+      padding-left: @gridGutterWidthPercent / 3;
+    }
+  }
+
+}
+
 
 
 /*---------------------------------------------------------
@@ -106,3 +218,4 @@
   background-image:  -o-linear-gradient(top, @from, @to);
   background-image:  linear-gradient(top, @from, @to);
 }
+

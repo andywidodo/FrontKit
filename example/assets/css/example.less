@@ -47,88 +47,30 @@
  */
 
 
+// Grids
+#grid > .fixed();
+#grid > .fluid();
+#grid > .rows();
+#grid > .offset();
 
-// Global Grid System with 16 grid column (based on 1140px grid system)
-.row, 
 .main, 
 .navbar {
+
 	width: 100%;
-	min-width: 755px;
+	min-width: @minWidthPX;
 	margin: 0 auto;
 	overflow: hidden;
 }
 
-.row, .main { max-width: 1140px; }
+.main { max-width: @maxWidthPX; }
 
 .main {
-	padding-left: 20px;
-	padding-right: 20px;
-}
-
-.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol, .thirteencol, .fourteencol, .fifteencol, .sixteencol {
-	float: left;
+	padding-left: @containerGutterPX;
+	padding-right: @containerGutterPX;
 }
 
 
-.row-fluid {
-	.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol, .thirteencol, .fourteencol, .fifteencol, .sixteencol {
-		margin-right: 1.82%;
-	}	
-	.onecol { width: 4.55%; }
-	.twocol { width: 10.92%; }
-	.threecol { width: 17.27%; }
-	.fourcol { width: 23.64%; }
-	.fivecol { width: 30%; }
-	.sixcol { width: 36.36%; }
-	.sevencol { width: 42.73%; }
-	.eightcol { width: 49.09%; }
-	.ninecol { width: 55.45%; }
-	.tencol { width: 61.82%; }
-	.elevencol { width: 68.18%; }
-	.twelvecol { width: 74.55%; }
-	.thirteencol { width: 80.90%; }
-	.fourteencol { width: 87.27%; }
-	.fifteencol { width: 93.64%; }
-	.sixteencol { width: 100%; }
-}
 
-.row {
-	.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol, .thirteencol, .fourteencol, .fifteencol, .sixteencol {
-		margin-right: 20px;
-	}
-	.onecol { width: 50px; }
-	.twocol { width: 120px; }
-	.threecol { width: 190px; }
-	.fourcol { width: 260px; }
-	.fivecol { width: 330px; }
-	.sixcol { width: 400px; }
-	.sevencol { width: 470px; }
-	.eightcol { width: 540px; }
-	.ninecol { width: 610px; }
-	.tencol { width: 680px; }
-	.elevencol { width: 750px; }
-	.twelvecol { width: 820px; }
-	.thirteencol { width: 890px; }
-	.fourteencol { width: 960px; }
-	.fifteencol { width: 1030px; }
-	.sixteencol { width: 1100px; }
-}
-
-.gridrow { margin-bottom: 20px;}
-
-.row,
-.row-fluid {
-	overflow: hidden;
-	.grid {
-		.box-round(3px);
-		background: #efefef;
-		padding: 3px;
-		text-align: center;
-	}
-	.last {
-		margin-right: 0px;
-	}
-}
 
 
 // Navbar
@@ -143,6 +85,7 @@
 			li {
 				text-align: center;
 				a {
+					cursor: pointer;
 					display: block;
 					float: left;
 					margin: 0;
@@ -164,6 +107,8 @@
 					display: block;
 					float: left;
 					padding: 0;
+					background: none;
+					&:hover { background: none; }
 					&:before {
 						margin: -19px 0 0;
 						content: url(../images/icon-home.png);
@@ -172,7 +117,7 @@
 						display: inline-block;
 					}
 					&:hover:before,
-					&.active:before{ margin: 0; }
+					&.active:before { margin: 0; }
 				}
 			}
 		}
@@ -185,12 +130,13 @@
 	header {
 		margin: 0 0 40px;
 		h1 { 
-			margin-bottom: 0;
+			//margin-bottom: 0;
 			.font-size(40);
+			margin-top:.525em;
 		}
 		h2 { 
 			font-weight: normal;
-			margin: 0;
+			margin: 0 0 1.75em;
 		}
 	}
 	section {
@@ -198,12 +144,14 @@
 		&.page-section {
 			margin: 0 0 40px;
 		}
+		p { margin-top: 0;}
 		.section-header { 
 			border-bottom: solid 1px #ececec; 
 			padding: 0;
-			margin: 0 0 1em;
+			margin: 0 0 1.125em;
 			h1 { 
 				margin: 0; 
+				padding: 0.375em 0;
 				.font-size(28); 
 				small {
 					.font-size(12);
@@ -215,7 +163,7 @@
 		.row-fluid,
 		.row {
 			h2 { 
-				margin: 0; 
+				margin: .59em 0; 
 				.font-size(18); 
 				//font-weight: normal;
 			}

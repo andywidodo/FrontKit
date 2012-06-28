@@ -469,16 +469,17 @@ table {
  *
  *--------------------------------------------------------------
  */
-/*62.5%=10px, 75% = 12px, 87.5% = 14px, 100% = 16px*/
+/* 62.5%=10px, 75% = 12px, 87.5% = 14px, 100% = 16px, etc */
 /*
  *--------------------------------------------------------------
  *
- * CSS3 LESS Mixins
+ * LESS Mixins
  *
  * LESS Mixins for projects with CSS3 & LESS
  * http://lesscss.org
  *
  * @mixin font-size (rem & px based)
+ * @mixin font
  * @mixin text-shadow
  * @mixin box-round (rounded corner box)
  * @mixin box-shadow
@@ -497,6 +498,17 @@ table {
  - the constant number '16' derived from our base font-size 100% which is equal to 16 in px measurement.
  - feel free to edit the constant number according to your baseline font size (62.5%==10, 87,5%=14, so on)
  - target/context = result (Ethan Marcotte http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/)
+
+----------------------------------------------------------*/
+/*----------------------------------------------------------
+
+ Typographic Mixins
+ Define the font-family easier, from sans-serif, serif to monospace.
+
+----------------------------------------------------------*/
+/*----------------------------------------------------------
+
+ Grid
 
 ----------------------------------------------------------*/
 /*---------------------------------------------------------
@@ -561,8 +573,10 @@ html {
 }
 body {
   background: #ffffff;
-  font: 87.5% /1.5 'Helvetica Neue', 'HelveticaNeue', 'Helvetica', Arial, sans-serif;
   color: #333333;
+  font-size: 87.5%;
+  line-height: 1.5;
+  font-family: 'Helvetica Neue', 'HelveticaNeue', 'Helvetica', Arial, sans-serif;
 }
 hr {
   border: solid #ddd;
@@ -571,14 +585,14 @@ hr {
   height: 0;
 }
 a {
-  color: #0088cc;
+  color: #3399cc;
   text-decoration: none;
 }
 a:hover {
-  color: #005580;
+  color: #1f5c7a;
 }
 a:visited {
-  color: #9ebccb;
+  color: #70b8db;
 }
 a:focus {
   outline: thin dotted;
@@ -590,30 +604,35 @@ a:active {
 h1 {
   font-size: 32px;
   font-size: 2.2857142857142856rem;
-  margin: .67em 0;
+  margin: .66em 0 0;
 }
 h2 {
   font-size: 24px;
   font-size: 1.7142857142857142rem;
-  margin: .875em 0;
+  margin: .875em 0 0;
 }
 h3 {
   font-size: 21px;
   font-size: 1.5rem;
-  margin: 1em 0;
+  margin: .5em 0;
 }
 h4 {
-  margin: 1.5em 0;
+  margin: .75em 0;
 }
 h5 {
   font-size: 12px;
   font-size: 0.8571428571428571rem;
-  margin: 1.75em 0;
+  margin: 1.75em 0 0;
 }
 h6 {
   font-size: 11px;
   font-size: 0.7857142857142857rem;
-  margin: 2em 0;
+  margin: 2em 0 0;
+}
+ul,
+ol,
+p {
+  margin: 0 0 1em;
 }
 p,
 li {
@@ -646,6 +665,7 @@ q:after {
   content: "";
   content: none;
 }
+/* Position subscript and superscript content without affecting line-height */
 sub,
 sup {
   font-size: 75%;
@@ -710,7 +730,7 @@ label,
 input,
 textarea,
 button {
-  font-family: 'Helvetica Neue', 'HelveticaNeue', 'Helvetica', Arial, sans-serif;
+  font-family: "'Helvetica Neue', 'HelveticaNeue', 'Helvetica', Arial, sans-serif";
 }
 input,
 textarea {
@@ -750,6 +770,9 @@ table {
  * recommended: leave lines below alone
  *--------------------------------------------------------------
  */
+.clearfix {
+  *zoom: 1;
+}
 .clearfix:before,
 .clearfix:after {
   content: "";
@@ -757,9 +780,6 @@ table {
 }
 .clearfix:after {
   clear: both;
-}
-.clearfix {
-  *zoom: 1;
 }
 .hide {
   border: 0;
@@ -794,7 +814,147 @@ table {
  *
  *--------------------------------------------------------------
  */
-.row,
+.col16 {
+  width: 1100px;
+}
+.col15 {
+  width: 1030px;
+}
+.col14 {
+  width: 960px;
+}
+.col13 {
+  width: 890px;
+}
+.col12 {
+  width: 820px;
+}
+.col11 {
+  width: 750px;
+}
+.col10 {
+  width: 680px;
+}
+.col9 {
+  width: 610px;
+}
+.col8 {
+  width: 540px;
+}
+.col7 {
+  width: 470px;
+}
+.col6 {
+  width: 400px;
+}
+.col5 {
+  width: 330px;
+}
+.col4 {
+  width: 260px;
+}
+.col3 {
+  width: 190px;
+}
+.col2 {
+  width: 120px;
+}
+.col1 {
+  width: 50px;
+}
+.row-fluid {
+  width: 100%;
+}
+.row-fluid > .col16 {
+  width: 100%;
+}
+.row-fluid > .col15 {
+  width: 93.63636363636364%;
+}
+.row-fluid > .col14 {
+  width: 87.27272727272727%;
+}
+.row-fluid > .col13 {
+  width: 80.9090909090909%;
+}
+.row-fluid > .col12 {
+  width: 74.54545454545455%;
+}
+.row-fluid > .col11 {
+  width: 68.18181818181817%;
+}
+.row-fluid > .col10 {
+  width: 61.81818181818181%;
+}
+.row-fluid > .col9 {
+  width: 55.45454545454545%;
+}
+.row-fluid > .col8 {
+  width: 49.09090909090909%;
+}
+.row-fluid > .col7 {
+  width: 42.72727272727273%;
+}
+.row-fluid > .col6 {
+  width: 36.36363636363637%;
+}
+.row-fluid > .col5 {
+  width: 30%;
+}
+.row-fluid > .col4 {
+  width: 23.636363636363637%;
+}
+.row-fluid > .col3 {
+  width: 17.272727272727273%;
+}
+.row-fluid > .col2 {
+  width: 10.909090909090908%;
+}
+.row-fluid > .col1 {
+  width: 4.545454545454546%;
+}
+.row-fluid,
+.row {
+  overflow: hidden;
+}
+.row-fluid .grid,
+.row .grid {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #efefef;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: center;
+}
+.row-fluid .bg-darkgrey,
+.row .bg-darkgrey {
+  background: #666666;
+}
+.row-fluid .gridrow,
+.row .gridrow {
+  margin-bottom: 20px;
+}
+.row-fluid > [class*="col"],
+.row > [class*="col"] {
+  float: left;
+}
+.row-fluid > [class*="col"]:last-child,
+.row > [class*="col"]:last-child {
+  margin-right: 0;
+}
+.row-fluid > [class*="col"] {
+  margin-right: 1.8181818181818181%;
+}
+.row {
+  max-width: 1140px;
+}
+.row > [class*="col"] {
+  margin-right: 20px;
+}
+.shift {
+  padding-left: 0.6060606060606061%;
+}
 .main,
 .navbar {
   width: 100%;
@@ -802,183 +962,12 @@ table {
   margin: 0 auto;
   overflow: hidden;
 }
-.row,
 .main {
   max-width: 1140px;
 }
 .main {
   padding-left: 20px;
   padding-right: 20px;
-}
-.onecol,
-.twocol,
-.threecol,
-.fourcol,
-.fivecol,
-.sixcol,
-.sevencol,
-.eightcol,
-.ninecol,
-.tencol,
-.elevencol,
-.twelvecol,
-.thirteencol,
-.fourteencol,
-.fifteencol,
-.sixteencol {
-  float: left;
-}
-.row-fluid .onecol,
-.row-fluid .twocol,
-.row-fluid .threecol,
-.row-fluid .fourcol,
-.row-fluid .fivecol,
-.row-fluid .sixcol,
-.row-fluid .sevencol,
-.row-fluid .eightcol,
-.row-fluid .ninecol,
-.row-fluid .tencol,
-.row-fluid .elevencol,
-.row-fluid .twelvecol,
-.row-fluid .thirteencol,
-.row-fluid .fourteencol,
-.row-fluid .fifteencol,
-.row-fluid .sixteencol {
-  margin-right: 1.82%;
-}
-.row-fluid .onecol {
-  width: 4.55%;
-}
-.row-fluid .twocol {
-  width: 10.92%;
-}
-.row-fluid .threecol {
-  width: 17.27%;
-}
-.row-fluid .fourcol {
-  width: 23.64%;
-}
-.row-fluid .fivecol {
-  width: 30%;
-}
-.row-fluid .sixcol {
-  width: 36.36%;
-}
-.row-fluid .sevencol {
-  width: 42.73%;
-}
-.row-fluid .eightcol {
-  width: 49.09%;
-}
-.row-fluid .ninecol {
-  width: 55.45%;
-}
-.row-fluid .tencol {
-  width: 61.82%;
-}
-.row-fluid .elevencol {
-  width: 68.18%;
-}
-.row-fluid .twelvecol {
-  width: 74.55%;
-}
-.row-fluid .thirteencol {
-  width: 80.90%;
-}
-.row-fluid .fourteencol {
-  width: 87.27%;
-}
-.row-fluid .fifteencol {
-  width: 93.64%;
-}
-.row-fluid .sixteencol {
-  width: 100%;
-}
-.row .onecol,
-.row .twocol,
-.row .threecol,
-.row .fourcol,
-.row .fivecol,
-.row .sixcol,
-.row .sevencol,
-.row .eightcol,
-.row .ninecol,
-.row .tencol,
-.row .elevencol,
-.row .twelvecol,
-.row .thirteencol,
-.row .fourteencol,
-.row .fifteencol,
-.row .sixteencol {
-  margin-right: 20px;
-}
-.row .onecol {
-  width: 50px;
-}
-.row .twocol {
-  width: 120px;
-}
-.row .threecol {
-  width: 190px;
-}
-.row .fourcol {
-  width: 260px;
-}
-.row .fivecol {
-  width: 330px;
-}
-.row .sixcol {
-  width: 400px;
-}
-.row .sevencol {
-  width: 470px;
-}
-.row .eightcol {
-  width: 540px;
-}
-.row .ninecol {
-  width: 610px;
-}
-.row .tencol {
-  width: 680px;
-}
-.row .elevencol {
-  width: 750px;
-}
-.row .twelvecol {
-  width: 820px;
-}
-.row .thirteencol {
-  width: 890px;
-}
-.row .fourteencol {
-  width: 960px;
-}
-.row .fifteencol {
-  width: 1030px;
-}
-.row .sixteencol {
-  width: 1100px;
-}
-.gridrow {
-  margin-bottom: 20px;
-}
-.row,
-.row-fluid {
-  overflow: hidden;
-}
-.row .grid,
-.row-fluid .grid {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  background: #efefef;
-  padding: 3px;
-  text-align: center;
-}
-.row .last,
-.row-fluid .last {
-  margin-right: 0px;
 }
 .navbar {
   background-color: #222222;
@@ -1001,6 +990,7 @@ table {
   text-align: center;
 }
 .navbar nav ul li a {
+  cursor: pointer;
   display: block;
   float: left;
   margin: 0;
@@ -1022,6 +1012,10 @@ table {
   display: block;
   float: left;
   padding: 0;
+  background: none;
+}
+.navbar nav ul li.home a:hover {
+  background: none;
 }
 .navbar nav ul li.home a:before {
   margin: -19px 0 0;
@@ -1038,13 +1032,13 @@ table {
   margin: 0 0 40px;
 }
 .main header h1 {
-  margin-bottom: 0;
   font-size: 40px;
   font-size: 2.857142857142857rem;
+  margin-top: .525em;
 }
 .main header h2 {
   font-weight: normal;
-  margin: 0;
+  margin: 0 0 1.75em;
 }
 .main section {
   padding: 0;
@@ -1052,13 +1046,17 @@ table {
 .main section.page-section {
   margin: 0 0 40px;
 }
+.main section p {
+  margin-top: 0;
+}
 .main section .section-header {
   border-bottom: solid 1px #ececec;
   padding: 0;
-  margin: 0 0 1em;
+  margin: 0 0 1.125em;
 }
 .main section .section-header h1 {
   margin: 0;
+  padding: 0.375em 0;
   font-size: 28px;
   font-size: 2rem;
 }
@@ -1070,7 +1068,7 @@ table {
 }
 .main section .row-fluid h2,
 .main section .row h2 {
-  margin: 0;
+  margin: .59em 0;
   font-size: 18px;
   font-size: 1.2857142857142858rem;
 }
