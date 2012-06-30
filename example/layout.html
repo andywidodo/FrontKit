@@ -10,7 +10,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 	<meta charset="utf-8" />
 	<meta name="description" content="" />	
-	<link rel="stylesheet" type="text/css" href="assets/css/example.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/example.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/prettify.css" />
 	<meta name="author" content="Andy Widodo" />
 	<!--icons & favicon-->
 	<link rel="shortcut icon" href="favicon.ico" />
@@ -18,7 +19,7 @@
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png" />
 	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />	
 	<!--modernizr-->
-	<script src="assets/js/lib/modernizr-2.5.3.min.js"></script>	
+	<script src="assets/js/lib/modernizr-2.5.3.min.js"></script>		
 </head>
 <body>
 	<div class="navbar clearfix">
@@ -43,10 +44,10 @@
 			<div class="section-header">
 				<h1>Layout Basics</h1>
 			</div>
-			<div class="row">
+			<div class="row-fluid">
 				<div class="col8">
 					<h2>Fixed &amp; Fluid Grid Layout</h2>
-					<p>The default grid system utilizes 16 columns grid, with <code>max-width</code> for the fluid grid sets to 1140px (includes 20px padding wrapper).</p>
+					<p>The default grid system utilizes 16 columns grid, with <code class="prettify">max-width</code> for the fluid grid sets to 1140px (includes 20px padding wrapper).</p>
 					<p>In order to use the fixed grid layout, please use: <code>&lt;div class="row"&gt;&hellip;&lt;/div&gt;</code>. While the fluid grid layout can be deployed by using <code>&lt;div class="row-fluid"&gt;</code>.</p>
 				</div>
 				<div class="col8">
@@ -256,8 +257,45 @@
 		<!--/nestedfluid-section-->
 		<section id="gridcustomization-section" class="page-section clearfix">
 			<div class="section-header">
-				<h1>Grid Customization</h1>
+				<h1>Grid &amp; Base Layout Customization</h1>
 			</div>
+			<table class="table table-bordered table-striped">
+				<thead>
+					<tr>
+						<th>Variable</th>
+						<th>Default Value</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tfoot></tfoot>
+				<tbody>
+					<tr>
+						<td><code>@maxWidth</code></td>
+						<td>1140</td>
+						<td>Maximum width of the layout (without 'px').</td>
+					</tr>
+					<tr>
+						<td><code>@minWidth</code></td>
+						<td>755</td>
+						<td>Minimum width of the layout (without 'px').</td>
+					</tr>
+					<tr>
+						<td><code>@gridCol</code></td>
+						<td>16</td>
+						<td>Number of columns.</td>
+					</tr>
+					<tr>
+						<td><code>@fixedgridColWidthPX</code></td>
+						<td>50px</td>
+						<td>Width of a single column in fixed grid layout.</td>
+					</tr>
+					<tr>
+						<td><code>@containerGutter</code></td>
+						<td>20</td>
+						<td>Width of the main layout container's padding (without 'px').</td>
+					</tr>
+				</tbody>
+			</table>
 		</section>
 		<!--/gridcustomization-section-->
 		<footer>
@@ -268,6 +306,7 @@
 	<!-- jQuery loader & CDN fallback -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script>!window.jQuery && document.write('<script src="js/lib/jquery-1.7.2.min.js"><\/script>')</script>
+	<script src="assets/js/lib/prettify.js"></script>
 	<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
        mathiasbynens.be/notes/async-analytics-snippet -->
   	<script>
@@ -275,6 +314,6 @@
     	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
     	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
     	s.parentNode.insertBefore(g,s)}(document,'script'));
-  	</script>	
+  	</script>
 </body>
 </html>

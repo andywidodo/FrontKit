@@ -30,7 +30,7 @@ body {
 	//font: @baseFontSize~"/@{lineHeight} @{baseFontFamily}"; 
 	color: @baseFontColor;
 	font-size: @baseFontSize;
-	line-height: @lineHeight;
+	line-height: @baseLineHeight;
 	#font > #family > .sans-serif;
 }
 
@@ -52,25 +52,28 @@ a:hover, a:active { outline: 0; }
 
 // Typographic style & rhythm
 h1 { 
-	.font-size(32); 
-	margin: .66em 0 0; // 21/32
+	.font-size(28); 
+	 // 21/32
 }
 h2 {
 	.font-size(24);
-	margin: .875em 0 0; // 21/24
+	 // 21/24
 }
 h3 {
-	.font-size(21);
-	margin: .5em 0; // 21/21
+	.font-size(18);
+	 // 21/21
 }
-h4 { margin: .75em 0; }
+h4 { 
+	.font-size(14);
+	 
+}
 h5 {
 	.font-size(12);
-	margin: 1.75em 0 0;
+	
 }
 h6 {
 	.font-size(11);
-	margin: 2em 0 0;
+	
 }
 ul, ol, p { margin: 0 0 1em; }
 p,li { 
@@ -105,8 +108,12 @@ ul, ol {
 	padding: 0 0 0 15px;
 }
 dl {}
-dt {}
-dd {}
+dt { font-weight: bold; }
+dd { margin-left: @baseLineHeight / 2;}
+dt, dd { 
+	.font-size(@baseFontSizePX);
+	line-height: @baseLineHeight; 
+}
 
 
 // Media
@@ -132,7 +139,7 @@ option,
 label,
 input,
 textarea,
-button { font-family: @baseFontFamily; }
+button { #font > #family > .sans-serif; }
 
 input,
 textarea { outline: none; }
@@ -145,5 +152,17 @@ button, input { line-height: normal; }
 
 
 // Table
-table { border-collapse: collapse; border-spacing: 0; }
+table {
+  max-width: 100%;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: @tableBackground;
+  margin-bottom: @baseLineHeight;
+  th, td {
+  	padding: 8px;
+  	line-height: @baseLineHeight;
+  	vertical-align: top;
+  }
+}
 

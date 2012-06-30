@@ -42,9 +42,78 @@
 		<section id="typography-section" class="page-section clearfix">
 			<div class="section-header">
 				<h1>Typography <small>(header, paragraphs, lists and other type elements)</small></h1>
-			</div>			
+			</div>
+			<div class="row-fluid">
+				<div class="col8">
+					<h2>Typographic scale</h2>
+					<p>The typographic rhythm based on <code>@baseFontSize</code> and <code>@baseLineHeight</code>.</p>
+				</div>
+				<div class="col8">
+					<h1>This is heading 1</h1>
+					<h2>This is heading 2</h2>
+					<h3>This is heading 3</h3>
+					<h4>This is heading 4</h4>
+					<h5>This is heading 5</h5>
+					<h6>This is heading 6</h6>
+				</div>
+			</div>
 		</section>
 		<!--/typography-section-->
+		<section id="lists-section" class="page-section clearfix">
+			<div class="section-header">
+				<h1>Lists</h1>
+			</div>
+			<div class="row-fluid">
+				<div class="col8">
+					<h2>Unordered List</h2>
+					<p><code>&lt;ul&gt;</code></p>
+					<ul>
+						<li>Now that there is the Tec-9.</li>
+						<li>A crappy spray gun from South Miami.</li>
+						<li>This gun is advertised as the most popular gun in American crime.
+							<ul>
+								<li>Well, the way they make shows is.</li>
+								<li>They make one show.</li>
+							</ul>
+						</li>
+						<li>It actually says.</li>
+					</ul>
+				</div>
+				<div class="col8">
+					<h2>Ordered List</h2>
+					<p><code>&lt;ol&gt;</code></p>
+					<ol>
+						<li>Now that there is the Tec-9.</li>
+						<li>A crappy spray gun from South Miami.</li>
+						<li>This gun is advertised as the most popular gun in American crime.</li>
+						<li>It actually says.</li>
+					</ol>						
+				</div>				
+			</div>	
+			<div class="row-fluid">
+				<div class="col8">
+					<h2>Description</h2>
+					<p><code>&lt;dl&gt;</code></p>
+					<dl>
+						<dt>At vero eos et accusamus et iusto odio dignissimos</dt>
+						<dd>Ducimus qui blanditiis praesentium voluptatum deleniti</dd>
+						<dt>Temporibus autem quibusdam</dt>
+						<dd>Et harum quidem rerum facilis est et expedita distinctio</dd>
+					</dl>
+				</div>
+				<div class="col8">
+					<h2>Description Horizontal</h2>
+					<p><code>&lt;dl class="desc-horizontal"&gt;</code></p>
+					<dl class="desc-horizontal">
+						<dt>At vero</dt>
+						<dd>Ducimus qui blanditiis praesentium voluptatum deleniti</dd>
+						<dt>Temporibus</dt>
+						<dd>Itaque earum rerum hic tenetur a sapiente delectus</dd>
+					</dl>
+				</div>
+			</div>
+		</section>	
+		<!--/lists-section-->
 		<section id="form-section" class="page-section clearfix">
 			<div class="section-header">
 				<h1>Form <small>(for all form elements)</small></h1>
@@ -54,7 +123,214 @@
 		<section id="table-section" class="page-section clearfix">
 			<div class="section-header">
 				<h1>Tables <small>(for your tabular data)</small></h1>
-			</div>			
+			</div>		
+			<div class="row-fluid">
+				<div class="col16">
+					<h2>Table options</h2>
+					<table class="table table-bordered ">
+						<thead>
+							<tr>
+								<th>Name/Type</th>
+								<th>Class</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tfoot></tfoot>
+						<tbody>
+							<tr>
+								<td>Default</td>
+								<td>None</td>
+								<td>No styles, just bareboned default table.</td>
+							</tr>
+							<tr>
+								<td>Basic</td>
+								<td><code>.table</code></td>
+								<td>No vertical border/line, only lines between rows.</td>
+							</tr>
+							<tr>
+								<td>Bordered</td>
+								<td><code>.table-bordered</code></td>
+								<td>Outer border and rounded corner.</td>
+							</tr>
+							<tr>
+								<td>Striped</td>
+								<td><code>.table-striped</code></td>
+								<td>Odd/even rows.</td>
+							</tr>
+							<tr>
+								<td>Condensed</td>
+								<td><code>.table-condensed</code></td>
+								<td>Cuts vertical padding to 4px and horizontal padding to 5px.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="col16">
+					<h2>Example usage</h2>
+					<div class="row-fluid">
+						<h3>Basic</h3>
+						<div class="col4">							
+							<p>Lorem ipsum dolor sit amet consectetur adispicing elit sed diam nonummy</p>
+						</div>
+						<div class="col12">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Nickname</th>
+										<th>Description</th>
+									</tr>
+								</thead>
+								<tfoot></tfoot>
+								<tbody>
+									<tr>
+										<td>Andy</td>
+										<td>playgroundpilot</td>
+										<td>My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there.</td>
+									</tr>
+									<tr>
+										<td>Ari</td>
+										<td>hadiariawan</td>
+										<td>She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker.</td>
+									</tr>
+									<tr>
+										<td>Hazmi</td>
+										<td>hazmi</td>
+										<td>You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?</td>
+									</tr>
+									<tr>
+										<td>Ronggur</td>
+										<td>ronggur</td>
+										<td>Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="row-fluid">
+						<h3>Bordered</h3>
+						<div class="col4">							
+							<p>Lorem ipsum dolor sit amet consectetur adispicing elit sed diam nonummy</p>
+						</div>
+						<div class="col12">
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Nickname</th>
+										<th>Description</th>
+									</tr>
+								</thead>
+								<tfoot></tfoot>
+								<tbody>
+									<tr>
+										<td>Andy</td>
+										<td>playgroundpilot</td>
+										<td>My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there.</td>
+									</tr>
+									<tr>
+										<td>Ari</td>
+										<td>hadiariawan</td>
+										<td>She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker.</td>
+									</tr>
+									<tr>
+										<td>Hazmi</td>
+										<td>hazmi</td>
+										<td>You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?</td>
+									</tr>
+									<tr>
+										<td>Ronggur</td>
+										<td>ronggur</td>
+										<td>Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>	
+					<div class="row-fluid">
+						<h3>Striped</h3>
+						<div class="col4">							
+							<p>Lorem ipsum dolor sit amet consectetur adispicing elit sed diam nonummy</p>
+						</div>
+						<div class="col12">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Nickname</th>
+										<th>Description</th>
+									</tr>
+								</thead>
+								<tfoot></tfoot>
+								<tbody>
+									<tr>
+										<td>Andy</td>
+										<td>playgroundpilot</td>
+										<td>My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there.</td>
+									</tr>
+									<tr>
+										<td>Ari</td>
+										<td>hadiariawan</td>
+										<td>She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker.</td>
+									</tr>
+									<tr>
+										<td>Hazmi</td>
+										<td>hazmi</td>
+										<td>You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?</td>
+									</tr>
+									<tr>
+										<td>Ronggur</td>
+										<td>ronggur</td>
+										<td>Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>			
+					<div class="row-fluid">
+						<h3>Condensed</h3>
+						<div class="col4">							
+							<p>Lorem ipsum dolor sit amet consectetur adispicing elit sed diam nonummy</p>
+						</div>
+						<div class="col12">
+							<table class="table table-condensed">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Nickname</th>
+										<th>Description</th>
+									</tr>
+								</thead>
+								<tfoot></tfoot>
+								<tbody>
+									<tr>
+										<td>Andy</td>
+										<td>playgroundpilot</td>
+										<td>My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there.</td>
+									</tr>
+									<tr>
+										<td>Ari</td>
+										<td>hadiariawan</td>
+										<td>She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker.</td>
+									</tr>
+									<tr>
+										<td>Hazmi</td>
+										<td>hazmi</td>
+										<td>You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?</td>
+									</tr>
+									<tr>
+										<td>Ronggur</td>
+										<td>ronggur</td>
+										<td>Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>													
+				</div>
+			</div>
 		</section>	
 		<!--/table-section-->	
 		<footer>

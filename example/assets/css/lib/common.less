@@ -51,3 +51,85 @@
 
 // Hide visually, but maintain layout
 .invisible { visibility: hidden; }
+
+
+/*
+ *--------------------------------------------------------------
+ * TABLE STYLES
+ * customize your table styling
+ *--------------------------------------------------------------
+ */
+
+.table {
+  th,
+  td {
+    padding: 8px;
+    line-height: @baseLineHeight;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid @tableBorder;
+  }	
+}
+
+// Condensed version
+.table-condensed {
+  th,
+  td {
+    padding: 4px 5px;
+  }
+}
+
+// Bordered version
+.table-bordered {
+  border: 1px solid @tableBorder;
+  border-left: 0;
+  border-collapse: separate; // Done so we can round those corners!
+  *border-collapse: collapsed; // IE7 can't round corners anyway
+  .box-round(4px);
+  th,
+  td {
+   		border-left: 1px solid @tableBorder;
+  }
+  // Prevent a double border
+  thead:first-child tr:first-child th,
+  tbody:first-child tr:first-child th,
+  tbody:first-child tr:first-child td {
+   		border-top: 0;
+  }
+  // For first th or td in the first row in the first thead or tbody
+  thead:first-child tr:first-child th:first-child,
+  tbody:first-child tr:first-child td:first-child {
+    	.box-round(4px 0 0 0);
+  }  
+}
+
+// Striped table
+.table-striped {
+  tbody {
+    tr:nth-child(odd) td,
+    tr:nth-child(odd) th {
+      background-color: @tableBackgroundAccent;
+    }
+  }
+}
+
+
+
+/*
+ *--------------------------------------------------------------
+ * REUSABLE ELEMENTS' CUSTOM CLASS
+ * common elements' custom class
+ *--------------------------------------------------------------
+ */
+
+.desc-horizontal {
+  dt {
+    float: left;
+    clear: left;
+    width: 100px;
+    text-align: left;
+  }
+  dd {
+    margin-left: 110px;
+  }
+}

@@ -602,32 +602,28 @@ a:active {
   outline: 0;
 }
 h1 {
-  font-size: 32px;
-  font-size: 2.2857142857142856rem;
-  margin: .66em 0 0;
+  font-size: 28px;
+  font-size: 2rem;
 }
 h2 {
   font-size: 24px;
   font-size: 1.7142857142857142rem;
-  margin: .875em 0 0;
 }
 h3 {
-  font-size: 21px;
-  font-size: 1.5rem;
-  margin: .5em 0;
+  font-size: 18px;
+  font-size: 1.2857142857142858rem;
 }
 h4 {
-  margin: .75em 0;
+  font-size: 14px;
+  font-size: 1rem;
 }
 h5 {
   font-size: 12px;
   font-size: 0.8571428571428571rem;
-  margin: 1.75em 0 0;
 }
 h6 {
   font-size: 11px;
   font-size: 0.7857142857142857rem;
-  margin: 2em 0 0;
 }
 ul,
 ol,
@@ -697,6 +693,18 @@ ol {
   margin: 0;
   padding: 0 0 0 15px;
 }
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 0.75;
+}
+dt,
+dd {
+  font-size: 14px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
 img,
 embed,
 object,
@@ -730,7 +738,7 @@ label,
 input,
 textarea,
 button {
-  font-family: "'Helvetica Neue', 'HelveticaNeue', 'Helvetica', Arial, sans-serif";
+  font-family: 'Helvetica Neue', 'HelveticaNeue', 'Helvetica', Arial, sans-serif;
 }
 input,
 textarea {
@@ -752,8 +760,18 @@ input {
   line-height: normal;
 }
 table {
+  max-width: 100%;
+  width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
+  background-color: transparent;
+  margin-bottom: 1.5;
+}
+table th,
+table td {
+  padding: 8px;
+  line-height: 1.5;
+  vertical-align: top;
 }
 /*
  *--------------------------------------------------------------
@@ -806,6 +824,67 @@ table {
 }
 .invisible {
   visibility: hidden;
+}
+/*
+ *--------------------------------------------------------------
+ * TABLE STYLES
+ * customize your table styling
+ *--------------------------------------------------------------
+ */
+.table th,
+.table td {
+  padding: 8px;
+  line-height: 1.5;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
+.table-condensed th,
+.table-condensed td {
+  padding: 4px 5px;
+}
+.table-bordered {
+  border: 1px solid #dddddd;
+  border-left: 0;
+  border-collapse: separate;
+  *border-collapse: collapsed;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.table-bordered th,
+.table-bordered td {
+  border-left: 1px solid #dddddd;
+}
+.table-bordered thead:first-child tr:first-child th,
+.table-bordered tbody:first-child tr:first-child th,
+.table-bordered tbody:first-child tr:first-child td {
+  border-top: 0;
+}
+.table-bordered thead:first-child tr:first-child th:first-child,
+.table-bordered tbody:first-child tr:first-child td:first-child {
+  -webkit-border-radius: 4px 0 0 0;
+  -moz-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
+}
+.table-striped tbody tr:nth-child(odd) td,
+.table-striped tbody tr:nth-child(odd) th {
+  background-color: #f9f9f9;
+}
+/*
+ *--------------------------------------------------------------
+ * REUSABLE ELEMENTS' CUSTOM CLASS
+ * common elements' custom class
+ *--------------------------------------------------------------
+ */
+.desc-horizontal dt {
+  float: left;
+  clear: left;
+  width: 100px;
+  text-align: left;
+}
+.desc-horizontal dd {
+  margin-left: 110px;
 }
 /*
  *--------------------------------------------------------------
@@ -929,7 +1008,7 @@ table {
 }
 .row-fluid .bg-darkgrey,
 .row .bg-darkgrey {
-  background: #666666;
+  background: #cccccc;
 }
 .row-fluid .gridrow,
 .row .gridrow {
@@ -1066,9 +1145,8 @@ table {
   color: #666;
   font-weight: normal;
 }
-.main section .row-fluid h2,
-.main section .row h2 {
-  margin: .59em 0;
+.main section .row-fluid > h2,
+.main section .row > h2 {
   font-size: 18px;
   font-size: 1.2857142857142858rem;
 }
@@ -1084,42 +1162,28 @@ footer {
  * Modify as content requires
  *--------------------------------------------------------------
  */
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) {
   
 }
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 480px) {
   
 }
-@media screen and (max-width: 768px) {
-  .navbar {
-    padding: 0 5px;
-  }
-  .row,
-  body,
-  .container,
-  .main,
-  .navbar {
-    width: 100%;
-    min-width: 0;
-  }
-  .main,
-  .row .onecol,
-  .row .twocol,
-  .row .threecol,
-  .row .fourcol,
-  .row .fivecol,
-  .row .sixcol,
-  .row .sevencol,
-  .row .eightcol,
-  .row .ninecol,
-  .row .tencol,
-  .row .elevencol,
-  .row .twelvecol {
-    width: auto;
-    float: none;
-  }
+@media screen and (min-width: 600px) {
+  /*.navbar { padding:0 5px;}
+  	.row, body, .container, .main, .navbar {
+  		width: 100%;
+  		min-width: 0;
+  		margin: 0;
+  		padding: 0;
+  	}
+  	.main, .row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol {
+  		width: auto;
+  		float: none;
+  		margin: 0;
+  		padding: 0;
+  	}*/
 }
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1200px) {
   
 }
 /*

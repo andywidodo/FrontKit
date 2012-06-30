@@ -162,8 +162,8 @@
 		}
 		.row-fluid,
 		.row {
-			h2 { 
-				margin: .59em 0; 
+			> h2 { 
+				//margin: .59em 0; 
 				.font-size(18); 
 				//font-weight: normal;
 			}
@@ -192,37 +192,36 @@ footer {
  *--------------------------------------------------------------
  */
 
+
 // iPhone orientation portrait
- @media screen and (max-width: 320px) {
- 	//.main { padding: 0 20px;}
- }
+@media screen and (min-width: 320px) {
+}
 
 // iPhone orientation landscape
- @media screen and (max-width: 480px) {
+@media screen and (min-width: 480px) {
 
- }
+}
 
-// iPads and tablets orientation portrait
- @media screen and (max-width: 768px) {
- 	.navbar { padding:0 5px;}
- 	.row, body, .container, .main, .navbar {
-	width: 100%;
-	min-width: 0;
-	//margin: 0;
-	//padding: 0;
+// iPads, tablets & netbooks
+@media screen and (min-width: 600px) {
+	/*.navbar { padding:0 5px;}
+	.row, body, .container, .main, .navbar {
+		width: 100%;
+		min-width: 0;
+		margin: 0;
+		padding: 0;
 	}
 	.main, .row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol {
-	width: auto;
-	float: none;
-	//margin: 0;
-	//padding: 0;
-	}
- }
+		width: auto;
+		float: none;
+		margin: 0;
+		padding: 0;
+	}*/
+}
 
-// iPads, tablets orientation landscape and netbooks
- @media screen and (max-width: 1024px) {
-
- }
+// Desktop/large screen
+@media screen and (min-width: 1200px) {
+}
 
 
 
