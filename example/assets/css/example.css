@@ -15,13 +15,8 @@
  *
  *--------------------------------------------------------------
  */
-/*! normalize.css 2012-02-07T12:37 UTC - http://github.com/necolas/normalize.css */
-/* =============================================================================
-   HTML5 display definitions
-   ========================================================================== */
-/*
- * Corrects block display not defined in IE6/7/8/9 & FF3
- */
+/*! Adapted from normalize.css 2012-02-07T12:37 UTC - http://github.com/necolas/normalize.css */
+/* Corrects block display not defined in IE6/7/8/9 & FF3 */
 article,
 aside,
 details,
@@ -35,9 +30,7 @@ section,
 summary {
   display: block;
 }
-/*
- * Corrects inline-block display not defined in IE6/7/8/9 & FF3
- */
+/* Corrects inline-block display not defined in IE6/7/8/9 & FF3 */
 audio,
 canvas,
 video {
@@ -45,28 +38,18 @@ video {
   *display: inline;
   *zoom: 1;
 }
-/*
- * Prevents modern browsers from displaying 'audio' without controls
- */
+/* Prevents modern browsers from displaying 'audio' without controls */
 audio:not([controls]) {
   display: none;
 }
-/*
- * Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
- * Known issue: no IE6 support
- */
+/* Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+ * Known issue: no IE6 support */
 [hidden] {
   display: none;
 }
 /* =============================================================================
    Base
    ========================================================================== */
-/*
- * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
- *    http://clagnut.com/blog/348/#c790
- * 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
- *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
- */
 html {
   font-size: 100%;
   /* 1 */
@@ -78,28 +61,14 @@ html {
   /* 2 */
 
 }
-/*
- * Addresses font-family inconsistency between 'textarea' and other form elements.
- */
-html,
-button,
-input,
-select,
-textarea {
-  font-family: sans-serif;
-}
-/*
- * Addresses margins handled incorrectly in IE6/7
- */
+/* Addresses margins handled incorrectly in IE6/7 */
 body {
   margin: 0;
 }
 /* =============================================================================
    Links
    ========================================================================== */
-/*
- * Addresses outline displayed oddly in Chrome
- */
+/* Addresses outline displayed oddly in Chrome */
 a:focus {
   outline: thin dotted;
 }
@@ -111,46 +80,11 @@ a:hover,
 a:active {
   outline: 0;
 }
-/* =============================================================================
-   Typography
-   ========================================================================== */
-/*
- * Addresses font sizes and margins set differently in IE6/7
- * Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
- */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-h2 {
-  font-size: 1.5em;
-  margin: 0.83em 0;
-}
-h3 {
-  font-size: 1.17em;
-  margin: 1em 0;
-}
-h4 {
-  font-size: 1em;
-  margin: 1.33em 0;
-}
-h5 {
-  font-size: 0.83em;
-  margin: 1.67em 0;
-}
-h6 {
-  font-size: 0.75em;
-  margin: 2.33em 0;
-}
-/*
- * Addresses styling not present in IE7/8/9, S5, Chrome
- */
+/* Addresses styling not present in IE7/8/9, S5, Chrome */
 abbr[title] {
   border-bottom: 1px dotted;
 }
-/*
- * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
-*/
+/* Addresses style set to 'bolder' in FF3+, S4/5, Chrome */
 b,
 strong {
   font-weight: bold;
@@ -158,41 +92,12 @@ strong {
 blockquote {
   margin: 1em 40px;
 }
-/*
- * Addresses styling not present in S5, Chrome
- */
-dfn {
-  font-style: italic;
-}
-/*
- * Addresses styling not present in IE6/7/8/9
- */
+/* Addresses styling not present in IE6/7/8/9 */
 mark {
   background: #ff0;
   color: #000;
 }
-/*
- * Addresses margins set differently in IE6/7
- */
-p,
-pre {
-  margin: 1em 0;
-}
-/*
- * Corrects font family set oddly in IE6, S4/5, Chrome
- * en.wikipedia.org/wiki/User:Davidgothberg/Test59
- */
-pre,
-code,
-kbd,
-samp {
-  font-family: monospace, serif;
-  _font-family: 'courier new', monospace;
-  font-size: 1em;
-}
-/*
- * Improves readability of pre-formatted text in all browsers
- */
+/* Improves readability of pre-formatted text in all browsers */
 pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -212,52 +117,10 @@ q:after {
   content: '';
   content: none;
 }
-small {
-  font-size: 75%;
-}
-/*
- * Prevents sub and sup affecting line-height in all browsers
- * gist.github.com/413930
- */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-sup {
-  top: -0.5em;
-}
-sub {
-  bottom: -0.25em;
-}
 /* =============================================================================
    Lists
    ========================================================================== */
-/*
- * Addresses margins set differently in IE6/7
- */
-dl,
-menu,
-ol,
-ul {
-  margin: 1em 0;
-}
-dd {
-  margin: 0 0 0 40px;
-}
-/*
- * Addresses paddings set differently in IE6/7
- */
-menu,
-ol,
-ul {
-  padding: 0 0 0 40px;
-}
-/*
- * Corrects list images handled incorrectly in IE7
- */
+/* Corrects list images handled incorrectly in IE7 */
 nav ul,
 nav ol {
   list-style: none;
@@ -279,37 +142,28 @@ img {
   /* 2 */
 
 }
-/*
- * Corrects overflow displayed oddly in IE9
- */
+/* Corrects overflow displayed oddly in IE9 */
 svg:not(:root) {
   overflow: hidden;
 }
 /* =============================================================================
    Figures
    ========================================================================== */
-/*
- * Addresses margin not present in IE6/7/8/9, S5, O11
- */
+/* Addresses margin not present in IE6/7/8/9, S5, O11 */
 figure {
   margin: 0;
 }
 /* =============================================================================
    Forms
    ========================================================================== */
-/*
- * Corrects margin displayed oddly in IE6/7
- */
+/* Corrects margin displayed oddly in IE6/7 */
 form {
   margin: 0;
 }
-/*
- * Define consistent border, margin, and padding
- */
 fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 /*
  * 1. Corrects color not being inherited in IE6/7/8/9
@@ -379,9 +233,7 @@ input[type="submit"] {
   /* 3 */
 
 }
-/*
- * Re-set default cursor for disabled elements
- */
+/* Re-set default cursor for disabled elements */
 button[disabled],
 input[disabled] {
   cursor: default;
@@ -449,16 +301,6 @@ textarea {
   /* 2 */
 
 }
-/* =============================================================================
-   Tables
-   ========================================================================== */
-/*
- * Remove most spacing between table cells
- */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
 /*
  *--------------------------------------------------------------
  * WEBSITE NAME - variables.less
@@ -470,6 +312,7 @@ table {
  *--------------------------------------------------------------
  */
 /* 62.5%=10px, 75% = 12px, 87.5% = 14px, 100% = 16px, etc */
+/* Button variant */
 /*
  *--------------------------------------------------------------
  *
@@ -480,10 +323,16 @@ table {
  *
  * @mixin font-size (rem & px based)
  * @mixin font
+ * @mixin grid
+ * @mixin buttonBackground
  * @mixin text-shadow
  * @mixin box-round (rounded corner box)
  * @mixin box-shadow
- * @mixin box-gradient
+ * @mixin vertical-box-gradient
+ * @mixin transition
+ * @mixin tab-focus
+ * @mixin ie7-inline-block
+ * @mixin reset-filter
  *
  *
  *--------------------------------------------------------------
@@ -511,6 +360,11 @@ table {
  Grid
 
 ----------------------------------------------------------*/
+/*----------------------------------------------------------
+
+ Button Background
+
+----------------------------------------------------------*/
 /*---------------------------------------------------------
 
  Text Shadow
@@ -529,19 +383,42 @@ table {
 /*----------------------------------------------------------
 
  Box Shadow
- @param x			     : number (X-axis)
- @param y 			   : number (Y-axis)
- @param z 			   : number (Z-axis)
- @param s 			   : number (size/strength of shadow) 
- @param color 		 : color (hex, color of shadow)
+ @param shadow   : shadow spec  
 
 ----------------------------------------------------------*/
 /*----------------------------------------------------------
 
- Box Gradient
+ Vertical Box Gradient
  @param from      : start color (hex)
  @param to        : end color (hex)
  @param end       : number (divider of region)
+
+----------------------------------------------------------*/
+/*----------------------------------------------------------
+
+ Gradients
+
+----------------------------------------------------------*/
+/* Gradient for button and alerts */
+/*----------------------------------------------------------
+
+ Transition
+ @param transition: start, end
+
+----------------------------------------------------------*/
+/*----------------------------------------------------------
+
+ WebKit style focus
+
+----------------------------------------------------------*/
+/*----------------------------------------------------------
+
+ IE7 inline block hack
+
+----------------------------------------------------------*/
+/*----------------------------------------------------------
+
+ Reset filter for IE
 
 ----------------------------------------------------------*/
 /*
@@ -557,6 +434,30 @@ table {
 * {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
 }
 ::selection {
   background: #cc0000;
@@ -604,36 +505,50 @@ a:active {
 h1 {
   font-size: 28px;
   font-size: 2rem;
+  line-height: .75em;
+  margin: .75em 0;
 }
 h2 {
   font-size: 24px;
   font-size: 1.7142857142857142rem;
+  line-height: .875em;
+  margin: .875em 0;
 }
 h3 {
   font-size: 18px;
   font-size: 1.2857142857142858rem;
+  line-height: 1.167em;
+  margin: 1.167em 0;
 }
 h4 {
   font-size: 14px;
   font-size: 1rem;
+  line-height: 1.5em;
+  margin: 1.5em 0;
 }
 h5 {
   font-size: 12px;
   font-size: 0.8571428571428571rem;
+  line-height: 1.75em;
+  margin: 1.75em 0;
 }
 h6 {
   font-size: 11px;
   font-size: 0.7857142857142857rem;
-}
-ul,
-ol,
-p {
-  margin: 0 0 1em;
+  line-height: 1.91em;
+  margin: 1.91em 0;
 }
 p,
 li {
   font-size: 14px;
   font-size: 1rem;
+  line-height: 1.5em;
+}
+p {
+  margin-bottom: 10px;
+}
+li {
+  margin-bottom: 5px;
 }
 pre,
 code,
@@ -646,6 +561,7 @@ samp {
 small {
   font-size: 11px;
   font-size: 0.7857142857142857rem;
+  font-weight: normal;
 }
 /* Improve readability of pre-formatted text in all browsers */
 pre {
@@ -688,10 +604,17 @@ mark {
 dfn {
   font-style: italic;
 }
-ul,
+ul {
+  list-style: disc;
+}
 ol {
-  margin: 0;
+  list-style: decimal;
+}
+ul {
   padding: 0 0 0 15px;
+}
+ol {
+  padding: 0 0 0 20px;
 }
 dt {
   font-weight: bold;
@@ -710,24 +633,6 @@ embed,
 object,
 video {
   max-width: 100%;
-}
-/*Improve image quality when scaled in IE7*/
-img {
-  -ms-interpolation-mode: bicubic;
-}
-svg:not(:root) {
-  overflow: hidden;
-}
-figure {
-  margin: 0;
-}
-form {
-  margin: 0;
-}
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
 }
 label {
   cursor: pointer;
@@ -751,13 +656,65 @@ input[type="submit"],
 button {
   border: none;
 }
-button[disabled],
-input[disabled] {
-  cursor: default;
+input,
+textarea,
+select {
+  display: inline-block;
+  line-height: 21px;
 }
-button,
-input {
-  line-height: normal;
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 2.25;
+  line-height: 3;
+  border: 0;
+  border-bottom: 1px solid #eee;
+  color: #333333;
+  font-size: 16px;
+  font-size: 1.1428571428571428rem;
+}
+input[type="text"],
+input[type="password"],
+textarea {
+  border: solid 1px #cccccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding: 4px;
+  display: inline-block;
+  color: #555555;
+}
+/* Focus state */
+input,
+textarea {
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+input:focus,
+textarea:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+
+  -moz-box-shadow: -1px 0px 3px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: -1px 0px 3px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: -1px 0px 3px 0px rgba(0, 0, 0, 0.5);
+}
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus,
+select:focus {
+  -moz-box-shadow: 0 0 0 0 none;
+  -webkit-box-shadow: 0 0 0 0 none;
+  box-shadow: 0 0 0 0 none;
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }
 table {
   max-width: 100%;
@@ -827,7 +784,7 @@ table td {
 }
 /*
  *--------------------------------------------------------------
- * TABLE STYLES
+ * TABLE
  * customize your table styling
  *--------------------------------------------------------------
  */
@@ -873,8 +830,8 @@ table td {
 }
 /*
  *--------------------------------------------------------------
- * REUSABLE ELEMENTS' CUSTOM CLASS
- * common elements' custom class
+ * LISTS
+ * lists' common elements custom class
  *--------------------------------------------------------------
  */
 .desc-horizontal dt {
@@ -888,9 +845,239 @@ table td {
 }
 /*
  *--------------------------------------------------------------
- * PAGE LAYOUT
- * Customization starts here
- *
+ * FORM 
+ * form elements' custom class
+ *--------------------------------------------------------------
+ */
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input,
+textarea,
+select {
+  margin-bottom: 10px;
+}
+.rounded {
+  padding-left: 14px;
+  padding-right: 14px;
+  margin-bottom: 0;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+}
+.form-default label,
+.form-h label {
+  margin-top: 10px;
+  display: inline-block;
+}
+.form-default input[type="text"],
+.form-h input[type="text"],
+.form-default input[type="password"],
+.form-h input[type="password"],
+.form-default textarea,
+.form-h textarea {
+  width: 100%;
+}
+.form-inline fieldset {
+  margin-top: 10px;
+  background: #f5f5f5;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #eee;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.form-inline legend {
+  margin-bottom: 20px;
+}
+.form-inline input,
+.form-inline textarea {
+  display: inline-block;
+  margin-bottom: 0;
+}
+/* adjust label and form element width to accomodate your layout */
+.form-h input,
+.form-h textarea,
+.form-h select {
+  margin-bottom: 0;
+}
+.form-h .form-element-label {
+  float: left;
+  text-align: right;
+  margin-right: 20px;
+}
+.form-h input[type="text"],
+.form-h textarea {
+  width: 400px;
+  float: left;
+}
+.form-h button:first-child {
+  margin-left: 140px;
+}
+.form-element {
+  margin-bottom: 10.5px;
+}
+legend + .form-element {
+  margin-top: 21px;
+  -webkit-margin-top-collapse: separate;
+}
+.input-mini {
+  width: 60px;
+}
+.input-small {
+  width: 90px;
+}
+.input-medium {
+  width: 150px;
+}
+.input-large {
+  width: 210px;
+}
+.input-xlarge {
+  width: 270px;
+}
+.input-xxlarge {
+  width: 530px;
+}
+/*
+ *--------------------------------------------------------------
+ * BUTTONS 
+ * buttons custom default styling
+ *--------------------------------------------------------------
+ */
+.button {
+  cursor: pointer;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  padding: 4px 10px 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  color: #333333;
+  line-height: 1.5;
+  background-color: #f5f5f5;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(top, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+  border: 1px solid #cccccc;
+  border-bottom-color: #b3b3b3;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 0;
+}
+.button:hover {
+  background: #e6e6e6;
+}
+.button:active {
+  background-image: none;
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  background-color: #e6e6e6;
+  background-color: #d9d9d9 \9;
+  outline: 0;
+}
+.button:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+/* Button variant */
+.btn-primary,
+.btn-warning,
+.btn-error,
+.btn-neutral {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.btn-primary {
+  background-color: #338acc;
+  background-image: -moz-linear-gradient(top, #3399cc, #3373cc);
+  background-image: -ms-linear-gradient(top, #3399cc, #3373cc);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#3399cc), to(#3373cc));
+  background-image: -webkit-linear-gradient(top, #3399cc, #3373cc);
+  background-image: -o-linear-gradient(top, #3399cc, #3373cc);
+  background-image: linear-gradient(top, #3399cc, #3373cc);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3399cc', endColorstr='#3373cc', GradientType=0);
+  border-color: #3373cc #3373cc #24508f;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+}
+.btn-primary:hover {
+  background: #3373cc;
+}
+.btn-warning {
+  background-color: #ffab2e;
+  background-image: -moz-linear-gradient(top, #ffb84d, #ff9900);
+  background-image: -ms-linear-gradient(top, #ffb84d, #ff9900);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffb84d), to(#ff9900));
+  background-image: -webkit-linear-gradient(top, #ffb84d, #ff9900);
+  background-image: -o-linear-gradient(top, #ffb84d, #ff9900);
+  background-image: linear-gradient(top, #ffb84d, #ff9900);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffb84d', endColorstr='#ff9900', GradientType=0);
+  border-color: #ff9900 #ff9900 #b36b00;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+}
+.btn-warning:hover {
+  background: #ff9900;
+}
+.btn-error {
+  background-color: #eb0f0f;
+  background-image: -moz-linear-gradient(top, #ff1a1a, #cc0000);
+  background-image: -ms-linear-gradient(top, #ff1a1a, #cc0000);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ff1a1a), to(#cc0000));
+  background-image: -webkit-linear-gradient(top, #ff1a1a, #cc0000);
+  background-image: -o-linear-gradient(top, #ff1a1a, #cc0000);
+  background-image: linear-gradient(top, #ff1a1a, #cc0000);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff1a1a', endColorstr='#cc0000', GradientType=0);
+  border-color: #cc0000 #cc0000 #800000;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+}
+.btn-error:hover {
+  background: #cc0000;
+}
+.btn-neutral {
+  background-color: #54bfbf;
+  background-image: -moz-linear-gradient(top, #66cccc, #39acac);
+  background-image: -ms-linear-gradient(top, #66cccc, #39acac);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#66cccc), to(#39acac));
+  background-image: -webkit-linear-gradient(top, #66cccc, #39acac);
+  background-image: -o-linear-gradient(top, #66cccc, #39acac);
+  background-image: linear-gradient(top, #66cccc, #39acac);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66cccc', endColorstr='#39acac', GradientType=0);
+  border-color: #39acac #39acac #267373;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+}
+.btn-neutral:hover {
+  background: #39acac;
+}
+/*
+ *--------------------------------------------------------------
+ * MAIN TEMPLATE
+ * Default elements to template system
  *--------------------------------------------------------------
  */
 .col16 {
@@ -1043,19 +1230,21 @@ table td {
 }
 .main {
   max-width: 1140px;
-}
-.main {
   padding-left: 20px;
   padding-right: 20px;
 }
 .navbar {
-  background-color: #222222;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#434343), to(#000000));
-  background-image: -webkit-linear-gradient(top, #434343, #000000);
+  background-color: #282828;
   background-image: -moz-linear-gradient(top, #434343, #000000);
   background-image: -ms-linear-gradient(top, #434343, #000000);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#434343), to(#000000));
+  background-image: -webkit-linear-gradient(top, #434343, #000000);
   background-image: -o-linear-gradient(top, #434343, #000000);
   background-image: linear-gradient(top, #434343, #000000);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#434343', endColorstr='#000000', GradientType=0);
+  height: 42px;
+  margin: 0 0;
   padding: 0 50px;
 }
 .navbar nav {
@@ -1067,6 +1256,7 @@ table td {
 }
 .navbar nav ul li {
   text-align: center;
+  margin: 0;
 }
 .navbar nav ul li a {
   cursor: pointer;
@@ -1085,7 +1275,7 @@ table td {
 .navbar nav ul li.home a {
   width: 20px;
   height: 19px;
-  margin: 10px 12px 0 0;
+  margin: 10px 10px 0 0;
   overflow: hidden;
   position: relative;
   display: block;
@@ -1107,13 +1297,10 @@ table td {
 .navbar nav ul li.home a.active:before {
   margin: 0;
 }
-.main header {
-  margin: 0 0 40px;
-}
 .main header h1 {
   font-size: 40px;
   font-size: 2.857142857142857rem;
-  margin-top: .525em;
+  margin-top: 1.05em 0 0;
 }
 .main header h2 {
   font-weight: normal;
@@ -1123,32 +1310,24 @@ table td {
   padding: 0;
 }
 .main section.page-section {
-  margin: 0 0 40px;
+  margin: 0 0 42px;
 }
 .main section p {
   margin-top: 0;
 }
 .main section .section-header {
   border-bottom: solid 1px #ececec;
-  padding: 0;
-  margin: 0 0 1.125em;
+  padding: 0 0 10px;
+  margin: 0 0 10px;
 }
 .main section .section-header h1 {
-  margin: 0;
-  padding: 0.375em 0;
-  font-size: 28px;
-  font-size: 2rem;
+  margin: 1.5em 0 0;
 }
-.main section .section-header h1 small {
-  font-size: 12px;
-  font-size: 0.8571428571428571rem;
-  color: #666;
-  font-weight: normal;
-}
-.main section .row-fluid > h2,
-.main section .row > h2 {
+.main section .row-fluid h2 {
   font-size: 18px;
   font-size: 1.2857142857142858rem;
+  line-height: 1.167em;
+  margin: 1.167em 0 0.6em;
 }
 footer {
   font-size: 11px;

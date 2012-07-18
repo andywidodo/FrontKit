@@ -13,6 +13,13 @@
 // Layout
 * { -moz-box-sizing: border-box; box-sizing: border-box;}
 
+// Typographic reset
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,p,blockquote,th,td {
+	margin: 0;
+	padding: 0;
+}
+
+// General
 ::selection { background:@baseSelectionColor; } 
 ::-moz-selection { background:@baseSelectionColor; } 
 
@@ -52,38 +59,49 @@ a:hover, a:active { outline: 0; }
 
 // Typographic style & rhythm
 h1 { 
-	.font-size(28); 
-	 // 21/32
+	.font-size(28);	
+	line-height: .75em;
+	margin: .75em 0;
 }
 h2 {
 	.font-size(24);
-	 // 21/24
+	line-height: .875em;
+	margin: .875em 0;
 }
 h3 {
 	.font-size(18);
-	 // 21/21
+	line-height: 1.167em;
+	margin: 1.167em 0;
 }
 h4 { 
 	.font-size(14);
-	 
+	line-height: 1.5em;
+	margin: 1.5em 0;
 }
 h5 {
 	.font-size(12);
-	
+	line-height: 1.75em;
+	margin: 1.75em 0;
 }
 h6 {
 	.font-size(11);
-	
+	line-height: 1.91em;
+	margin: 1.91em 0;
 }
-ul, ol, p { margin: 0 0 1em; }
 p,li { 
 	.font-size(14); 
+	line-height: 1.5em;
 }
+p { margin-bottom: 10px; }
+li { margin-bottom: 5px; }
 pre, code, kbd, samp { 
 	#font > #family > .monospace;
 	font-size: 1em; 
 }
-small { .font-size(11); }
+small { 
+	.font-size(@baseFontSizeinPX - 3); 
+	font-weight: normal;
+}
 /* Improve readability of pre-formatted text in all browsers */
 pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
 blockquote {}
@@ -103,15 +121,15 @@ dfn { font-style: italic; }
 // Lists
 nav {}
 nav ul {}
-ul, ol {
-	margin: 0;
-	padding: 0 0 0 15px;
-}
+ul { list-style: disc; }
+ol { list-style: decimal; }
+ul { padding: 0 0 0 15px; }
+ol { padding: 0 0 0 20px; }
 dl {}
 dt { font-weight: bold; }
 dd { margin-left: @baseLineHeight / 2;}
 dt, dd { 
-	.font-size(@baseFontSizePX);
+	.font-size(@baseFontSizeinPX);
 	line-height: @baseLineHeight; 
 }
 
@@ -121,17 +139,9 @@ img,
 embed,
 object,
 video { max-width: 100%;}
-/*Improve image quality when scaled in IE7*/
-img { -ms-interpolation-mode: bicubic; }
-svg:not(:root) { overflow: hidden; }
-
-figure { margin: 0; }
 
 
 // Form elements
-form { margin: 0; }
-fieldset { border: 0; margin: 0; padding: 0; }
-
 label { cursor: pointer; }
 
 select,
@@ -147,8 +157,57 @@ textarea { resize: none; }
 
 input[type="submit"],
 button { border: none; }
-button[disabled], input[disabled] { cursor: default; }
-button, input { line-height: normal; }
+
+input,
+textarea,
+select {
+	display: inline-block;
+	line-height: @baseLineHeightinPX;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: @baseLineHeight * 1.5;
+  line-height: @baseLineHeight * 2;
+  border: 0;
+  border-bottom: 1px solid #eee;
+  color: @darkerGrey;
+  .font-size(16);
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+	border: solid 1px @inputBorder;
+	.box-round(3px);
+	padding: 4px;
+	display: inline-block;
+	color: @grey;
+}
+
+/* Focus state */
+input,
+textarea {
+	@transition: border linear .2s, box-shadow linear .2s;
+	.transition(@transition);
+}
+input:focus,
+textarea:focus {
+  border-color: rgba(82,168,236,.8);
+  outline: 0;
+  outline: thin dotted \9; /* IE6-9 */
+  .box-shadow(-1px 0px 3px 0px rgba(0,0,0,.5));	
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus,
+select:focus {
+  .box-shadow(0 0 0 0 none); // override for file inputs
+  .tab-focus();
+}
 
 
 // Table
@@ -165,4 +224,5 @@ table {
   	vertical-align: top;
   }
 }
+
 

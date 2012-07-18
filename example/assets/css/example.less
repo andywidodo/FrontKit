@@ -40,9 +40,8 @@
 
 /*
  *--------------------------------------------------------------
- * PAGE LAYOUT
- * Customization starts here
- *
+ * MAIN TEMPLATE
+ * Default elements to template system
  *--------------------------------------------------------------
  */
 
@@ -53,6 +52,8 @@
 #grid > .rows();
 #grid > .offset();
 
+
+// Header & default container
 .main, 
 .navbar {
 
@@ -62,20 +63,16 @@
 	overflow: hidden;
 }
 
-.main { max-width: @maxWidthPX; }
-
-.main {
+.main { 
+	max-width: @maxWidthPX; 
 	padding-left: @containerGutterPX;
 	padding-right: @containerGutterPX;
 }
 
-
-
-
-
-// Navbar
 .navbar {
-	.box-gradient(#434343, #000, 2);
+	#gradient > .vertical(#434343, #000);
+	height: 42px;
+	margin: 0 0;
 	padding: 0 50px;
 	nav {
 		float: left;
@@ -84,6 +81,7 @@
 			width: 600px;
 			li {
 				text-align: center;
+				margin: 0;
 				a {
 					cursor: pointer;
 					display: block;
@@ -101,7 +99,7 @@
 				&.home a { 
 					width: 20px;
 					height: 19px;
-					margin: 10px 12px 0 0;
+					margin: 10px 10px 0 0;
 					overflow: hidden;
 					position: relative;
 					display: block;
@@ -124,15 +122,12 @@
 	}
 }
 
-
-// Body
 .main {
 	header {
-		margin: 0 0 40px;
-		h1 { 
-			//margin-bottom: 0;
+		//margin: 0 0 40px;
+		h1 { 			
 			.font-size(40);
-			margin-top:.525em;
+			margin-top: 1.05em 0 0;
 		}
 		h2 { 
 			font-weight: normal;
@@ -142,34 +137,25 @@
 	section {
 		padding: 0;
 		&.page-section {
-			margin: 0 0 40px;
+			margin: 0 0 42px;
 		}
 		p { margin-top: 0;}
 		.section-header { 
 			border-bottom: solid 1px #ececec; 
-			padding: 0;
-			margin: 0 0 1.125em;
-			h1 { 
-				margin: 0; 
-				padding: 0.375em 0;
-				.font-size(28); 
-				small {
-					.font-size(12);
-					color: #666;
-					font-weight: normal;
-				}
-			}
+			padding: 0 0 10px;
+			margin: 0 0 10px;
+			h1 { margin: 1.5em 0 0;}
 		}
-		.row-fluid,
-		.row {
-			> h2 { 
-				//margin: .59em 0; 
-				.font-size(18); 
-				//font-weight: normal;
+		.row-fluid {
+			h2 { 
+				.font-size(18);
+				line-height: 1.167em;
+				margin: 1.167em 0 0.6em;
 			}
 		}
 	}
 }
+
 
 // Pages
 

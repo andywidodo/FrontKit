@@ -42,13 +42,41 @@
 @baseFontColor : #333;
 /* 62.5%=10px, 75% = 12px, 87.5% = 14px, 100% = 16px, etc */
 @baseFontSize : 87.5%; 
-@baseFontSizePX : 14;
+@baseFontSizeinPX : 14;
 @baseLineHeight : 1.5;
+@baseLineHeightinPX : 21px; // with base line height at 1.5 and 87.5% (14px) base font size, means 14 * 1.5
 
 // Tables
 @tableBackground : transparent; // overall background-color
 @tableBorder : #ddd;
 @tableBackgroundAccent : #f9f9f9; 
 
+// Form elements
+@inputBackground : @white;
+@inputBorder : #ccc;
+@inputDisabledBackground : @grayLighter;
+
+// Buttons
+@btnBackground : @white;
+@btnBackgroundHighlight : darken(@white, 10%);
+@btnBorder : darken(@white, 20%);
+/* Button variant */
+@btnPrimaryBg : @linkColor;
+@btnPrimaryBgHighlight : spin(@btnPrimaryBg, 15%);
+@btnNeutralBg : @aqua;
+@btnNeutralBgHighlight : darken(@aqua, 15%);
+@btnWarningBg: lighten(@orange, 15%);
+@btnWarningBgHighlight: @orange;
+@btnErrorBg: lighten(@red, 15%);
+@btnErrorBgHighlight: @red;
+
 // Colors
+@black : #000;
+@white : #fff;
+@orange : #f90;
+@red : #c00;
+@aqua : #6cc;
+@darkerGrey : #333;
 @darkGrey : #ccc;
+@grayLighter : #eee;
+@grey : #555;

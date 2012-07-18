@@ -32,7 +32,7 @@
 				<li><a href="less.html">LESS</a></li>
 			</ul>
 		</nav>
-	</div>	
+	</div>
 	<hr class="hide">
 	<div class="main clearfix" role="main" id="page-css">
 		<header>
@@ -45,8 +45,14 @@
 			</div>
 			<div class="row-fluid">
 				<div class="col8">
-					<h2>Typographic scale</h2>
+					<h2>Typography base settings</h2>
 					<p>The typographic rhythm based on <code>@baseFontSize</code> and <code>@baseLineHeight</code>.</p>
+					<ul>
+						<li><code>@baseFontSize</code>, <code>@baseLineHeight</code> and <code>@baseFontSizeinPX</code> to define the base font size and line-height.</li>
+						<li><code>@baseFontColor</code> defines the base font color.</li>
+						<li><code>@linkColor</code>, <code>@linkColorHover</code>, <code>@linkColorVisited</code> define states for text with links.</li>
+						<li><code>@baseSelectionColor</code> defines the color for selection text/part.</li> 
+					</ul>
 				</div>
 				<div class="col8">
 					<h1>This is heading 1</h1>
@@ -92,7 +98,7 @@
 			</div>	
 			<div class="row-fluid">
 				<div class="col8">
-					<h2>Description</h2>
+					<h2>Description <snall>(regular)</small></h2>
 					<p><code>&lt;dl&gt;</code></p>
 					<dl>
 						<dt>At vero eos et accusamus et iusto odio dignissimos</dt>
@@ -102,7 +108,7 @@
 					</dl>
 				</div>
 				<div class="col8">
-					<h2>Description Horizontal</h2>
+					<h2>Description <small>(horizontal)</small></h2>
 					<p><code>&lt;dl class="desc-horizontal"&gt;</code></p>
 					<dl class="desc-horizontal">
 						<dt>At vero</dt>
@@ -116,10 +122,224 @@
 		<!--/lists-section-->
 		<section id="form-section" class="page-section clearfix">
 			<div class="section-header">
-				<h1>Form <small>(for all form elements)</small></h1>
-			</div>			
+				<h1>Form Styles &amp; Layouts <small>(for all form elements)</small></h1>
+			</div>
+			<div class="row-fluid">
+				<div class="col16">
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th>Name/Type</th>
+								<th>Class</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tfoot>
+						</tfoot>
+						<tbody>
+							<tr>
+								<th>Default/vertical</th>
+								<td><code>.form-default</code></td>
+								<td>Default form, spans vertically, left aligned, label over input elements</td>
+							</tr>
+							<tr>
+								<th>Horizontal</th>
+								<td><code>.form-h</code></td>
+								<td>Spans horizontally, float left</td>
+							</tr>
+							<tr>
+								<th>Inline</th>
+								<td><code>.form-inline</code></td>
+								<td>Float left, left aligned, compact style, inline-block controls</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!--<div class="row-fluid">
+				<div class="col8">
+					<form action="#" class="form-default">
+						<fieldset>
+							<legend>Default/vertical form</legend>
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name">
+							<label for="email">E-mail</label>
+							<input type="text" name="email" id="email">	
+							<label for="address">Address</label>
+							<textarea name="address" id="address"></textarea>
+							<button type="submit" class="button btn-primary">Save Changes</button>
+							<button type="submit" class="button">Cancel</button>
+						</fieldset>
+					</form>
+				</div>
+				<div class="col8">
+					<form action="#" class="form-h">
+						<fieldset>
+							<legend>Horizontal form</legend>
+							<div class="form-element clearfix">
+								<label for="name2" class="form-element-label col2">Name</label>
+								<input type="text" name="name2" id="name2">
+							</div>
+							<div class="form-element clearfix">
+								<label for="email2" class="form-element-label col2">E-mail</label>
+								<input type="text" name="email2" id="email2">
+							</div>
+							<div class="form-element clearfix">
+								<label for="address2" class="form-element-label col2">Address</label>
+								<textarea name="address2" id="address2"></textarea>
+							</div>
+							<div class="form-element clearfix">
+							<button type="submit" class="button btn-primary">Save Changes</button>
+							<button type="submit" class="button">Cancel</button>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="col8">
+					<div class="row-fluid">
+						<div class="col16">
+							<div class="row-fluid">
+								<div class="col4">
+									<h4>Inline Form</h4>
+								</div>
+								<div class="col12">
+									<form action="#" class="form-inline">
+										<fieldset>
+											<legend class="hide">Inline form</legend>
+											<label class="hide" for="u">Username</label>
+											<input type="text" name="u" id="u" placeholder="Username" class="input-medium">
+											<label class="hide" for="p">Password</label>
+											<input type="text" name="p" id="p" placeholder="Password" class="input-medium">
+											<button type="submit" class="button btn-primary">Login</button>
+										</fieldset>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col8">
+				</div>
+			</div>-->
+			<div class="row-fluid">
+				<div class="col4">
+					<h3>Form Default/Vertical</h3>
+					<p>The default form <code>.form-default</code>. Left aligned label, with label over input elements.</p>
+				</div>
+				<div class="col12">
+					<form action="#" class="form-default">
+						<fieldset>
+							<legend>Default/vertical form</legend>
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name">
+							<label for="email">E-mail</label>
+							<input type="text" name="email" id="email">	
+							<label for="address">Address</label>
+							<textarea name="address" id="address"></textarea>
+							<button type="submit" class="button btn-primary">Save Changes</button>
+							<button type="submit" class="button">Cancel</button>
+						</fieldset>
+					</form>					
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="col4">
+					<h3>Form Horizontal</h3>
+					<p>Form spans horizontally with <code>.form-h</code>. Label floats left, right aligned, input element next to label.</p>
+				</div>
+				<div class="col12">
+					<form action="#" class="form-h">
+						<fieldset>
+							<legend>Horizontal form</legend>
+							<div class="form-element clearfix">
+								<label for="name2" class="form-element-label col2">Name</label>
+								<input type="text" name="name2" id="name2">
+							</div>
+							<div class="form-element clearfix">
+								<label for="email2" class="form-element-label col2">E-mail</label>
+								<input type="text" name="email2" id="email2" class="input-mini">
+							</div>
+							<div class="form-element clearfix">
+								<label for="address2" class="form-element-label col2">Address</label>
+								<textarea name="address2" id="address2"></textarea>
+							</div>
+							<div class="form-element clearfix">
+							<button type="submit" class="button btn-primary">Save Changes</button>
+							<button type="submit" class="button">Cancel</button>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="col4">
+					<h3>Form Inline</h3>
+					<p>Add <code>.form-inline</code>, hidden labels, input elements using display inline-block</p>
+				</div>
+				<div class="col12">
+					<form action="#" class="form-inline">
+						<fieldset>
+							<legend class="hide">Inline form</legend>
+							<label class="hide" for="u">Username</label>
+							<input type="text" name="u" id="u" placeholder="Username" class="input-medium">
+							<label class="hide" for="p">Password</label>
+							<input type="text" name="p" id="p" placeholder="Password" class="input-medium">
+							<button type="submit" class="button btn-primary">Login</button>
+						</fieldset>
+					</form>
+				</div>
+			</div>
 		</section>	
-		<!--/table-section-->
+		<!--/form-section-->
+		<section id="button-section" class="page-section clearfix">
+			<div class="section-header">
+				<h1>Button Type</h1>
+			</div>
+			<div class="row-fluid">
+				<div class="col16">
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th>Button</th>
+								<th>Class Name</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tfoot></tfoot>
+						<tbody>
+							<tr>
+								<td><button type="submit" class="button">Default</button></td>
+								<td><code>.button</code></td>
+								<td>Default button style, standard with gradient.</td>
+							</tr>
+							<tr>
+								<td><button type="submit" class="button btn-neutral">Neutral</button></td>
+								<td><code>.button .btn-neutral</code></td>
+								<td>Neutral style, used as an alternate to default style</td>
+							</tr>
+							<tr>
+								<td><button type="submit" class="button btn-primary">Primary</button></td>
+								<td><code>.button .btn-primary</code></td>
+								<td>Primary button style, used for default/primary actions</td>
+							</tr>
+							<tr>
+								<td><button type="submit" class="button btn-warning">Warning</button></td>
+								<td><code>.button .btn-warning</code></td>
+								<td>Indicates for action that needs to be taken cautiously</td>
+							</tr>
+							<tr>
+								<td><button type="submit" class="button btn-error">Error</button></td>
+								<td><code>.button .btn-error</code></td>
+								<td>Button style for an action that could impact a dangerous or negative state</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+		<!--/button-section-->
 		<section id="table-section" class="page-section clearfix">
 			<div class="section-header">
 				<h1>Tables <small>(for your tabular data)</small></h1>
@@ -167,170 +387,165 @@
 				</div>
 			</div>
 			<div class="row-fluid">
-				<div class="col16">
-					<h2>Example usage</h2>
-					<div class="row-fluid">
-						<h3>Basic</h3>
-						<div class="col4">							
-							<p>Lorem ipsum dolor sit amet consectetur adispicing elit sed diam nonummy</p>
-						</div>
-						<div class="col12">
-							<table class="table">
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th>Nickname</th>
-										<th>Description</th>
-									</tr>
-								</thead>
-								<tfoot></tfoot>
-								<tbody>
-									<tr>
-										<td>Andy</td>
-										<td>playgroundpilot</td>
-										<td>My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there.</td>
-									</tr>
-									<tr>
-										<td>Ari</td>
-										<td>hadiariawan</td>
-										<td>She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker.</td>
-									</tr>
-									<tr>
-										<td>Hazmi</td>
-										<td>hazmi</td>
-										<td>You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?</td>
-									</tr>
-									<tr>
-										<td>Ronggur</td>
-										<td>ronggur</td>
-										<td>Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is.</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-					<div class="row-fluid">
-						<h3>Bordered</h3>
-						<div class="col4">							
-							<p>Lorem ipsum dolor sit amet consectetur adispicing elit sed diam nonummy</p>
-						</div>
-						<div class="col12">
-							<table class="table table-bordered">
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th>Nickname</th>
-										<th>Description</th>
-									</tr>
-								</thead>
-								<tfoot></tfoot>
-								<tbody>
-									<tr>
-										<td>Andy</td>
-										<td>playgroundpilot</td>
-										<td>My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there.</td>
-									</tr>
-									<tr>
-										<td>Ari</td>
-										<td>hadiariawan</td>
-										<td>She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker.</td>
-									</tr>
-									<tr>
-										<td>Hazmi</td>
-										<td>hazmi</td>
-										<td>You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?</td>
-									</tr>
-									<tr>
-										<td>Ronggur</td>
-										<td>ronggur</td>
-										<td>Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is.</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>	
-					<div class="row-fluid">
-						<h3>Striped</h3>
-						<div class="col4">							
-							<p>Lorem ipsum dolor sit amet consectetur adispicing elit sed diam nonummy</p>
-						</div>
-						<div class="col12">
-							<table class="table table-striped">
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th>Nickname</th>
-										<th>Description</th>
-									</tr>
-								</thead>
-								<tfoot></tfoot>
-								<tbody>
-									<tr>
-										<td>Andy</td>
-										<td>playgroundpilot</td>
-										<td>My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there.</td>
-									</tr>
-									<tr>
-										<td>Ari</td>
-										<td>hadiariawan</td>
-										<td>She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker.</td>
-									</tr>
-									<tr>
-										<td>Hazmi</td>
-										<td>hazmi</td>
-										<td>You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?</td>
-									</tr>
-									<tr>
-										<td>Ronggur</td>
-										<td>ronggur</td>
-										<td>Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is.</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>			
-					<div class="row-fluid">
-						<h3>Condensed</h3>
-						<div class="col4">							
-							<p>Lorem ipsum dolor sit amet consectetur adispicing elit sed diam nonummy</p>
-						</div>
-						<div class="col12">
-							<table class="table table-condensed">
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th>Nickname</th>
-										<th>Description</th>
-									</tr>
-								</thead>
-								<tfoot></tfoot>
-								<tbody>
-									<tr>
-										<td>Andy</td>
-										<td>playgroundpilot</td>
-										<td>My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there.</td>
-									</tr>
-									<tr>
-										<td>Ari</td>
-										<td>hadiariawan</td>
-										<td>She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker.</td>
-									</tr>
-									<tr>
-										<td>Hazmi</td>
-										<td>hazmi</td>
-										<td>You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?</td>
-									</tr>
-									<tr>
-										<td>Ronggur</td>
-										<td>ronggur</td>
-										<td>Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is.</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>													
+				<h3>Basic</h3>
+				<div class="col4">							
+					<p>Lorem ipsum dolor sit amet consectetur adispicing elit sed diam nonummy</p>
+				</div>
+				<div class="col12">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Nickname</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tfoot></tfoot>
+						<tbody>
+							<tr>
+								<td>Andy</td>
+								<td>playgroundpilot</td>
+								<td>My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there.</td>
+							</tr>
+							<tr>
+								<td>Ari</td>
+								<td>hadiariawan</td>
+								<td>She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker.</td>
+							</tr>
+							<tr>
+								<td>Hazmi</td>
+								<td>hazmi</td>
+								<td>You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?</td>
+							</tr>
+							<tr>
+								<td>Ronggur</td>
+								<td>ronggur</td>
+								<td>Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is.</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
+			<div class="row-fluid">
+				<h3>Bordered</h3>
+				<div class="col4">							
+					<p>Lorem ipsum dolor sit amet consectetur adispicing elit sed diam nonummy</p>
+				</div>
+				<div class="col12">
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Nickname</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tfoot></tfoot>
+						<tbody>
+							<tr>
+								<td>Andy</td>
+								<td>playgroundpilot</td>
+								<td>My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there.</td>
+							</tr>
+							<tr>
+								<td>Ari</td>
+								<td>hadiariawan</td>
+								<td>She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker.</td>
+							</tr>
+							<tr>
+								<td>Hazmi</td>
+								<td>hazmi</td>
+								<td>You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?</td>
+							</tr>
+							<tr>
+								<td>Ronggur</td>
+								<td>ronggur</td>
+								<td>Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>	
+			<div class="row-fluid">
+				<h3>Striped</h3>
+				<div class="col4">							
+					<p>Lorem ipsum dolor sit amet consectetur adispicing elit sed diam nonummy</p>
+				</div>
+				<div class="col12">
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Nickname</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tfoot></tfoot>
+						<tbody>
+							<tr>
+								<td>Andy</td>
+								<td>playgroundpilot</td>
+								<td>My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there.</td>
+							</tr>
+							<tr>
+								<td>Ari</td>
+								<td>hadiariawan</td>
+								<td>She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker.</td>
+							</tr>
+							<tr>
+								<td>Hazmi</td>
+								<td>hazmi</td>
+								<td>You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?</td>
+							</tr>
+							<tr>
+								<td>Ronggur</td>
+								<td>ronggur</td>
+								<td>Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>			
+			<div class="row-fluid">
+				<h3>Condensed</h3>
+				<div class="col4">							
+					<p>Lorem ipsum dolor sit amet consectetur adispicing elit sed diam nonummy</p>
+				</div>
+				<div class="col12">
+					<table class="table table-condensed">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Nickname</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tfoot></tfoot>
+						<tbody>
+							<tr>
+								<td>Andy</td>
+								<td>playgroundpilot</td>
+								<td>My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there.</td>
+							</tr>
+							<tr>
+								<td>Ari</td>
+								<td>hadiariawan</td>
+								<td>She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker.</td>
+							</tr>
+							<tr>
+								<td>Hazmi</td>
+								<td>hazmi</td>
+								<td>You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?</td>
+							</tr>
+							<tr>
+								<td>Ronggur</td>
+								<td>ronggur</td>
+								<td>Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>													
 		</section>	
 		<!--/table-section-->	
 		<footer>

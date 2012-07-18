@@ -55,7 +55,7 @@
 
 /*
  *--------------------------------------------------------------
- * TABLE STYLES
+ * TABLE
  * customize your table styling
  *--------------------------------------------------------------
  */
@@ -117,11 +117,12 @@
 
 /*
  *--------------------------------------------------------------
- * REUSABLE ELEMENTS' CUSTOM CLASS
- * common elements' custom class
+ * LISTS
+ * lists' common elements custom class
  *--------------------------------------------------------------
  */
 
+// used for horizontal definition list <dl class="desc-horizontal">
 .desc-horizontal {
   dt {
     float: left;
@@ -133,3 +134,149 @@
     margin-left: 110px;
   }
 }
+
+
+
+/*
+ *--------------------------------------------------------------
+ * FORM 
+ * form elements' custom class
+ *--------------------------------------------------------------
+ */
+
+// Default/vertical form
+label { 
+  display: block; 
+  margin-bottom: 5px;
+}
+input,
+textarea,
+select {
+  margin-bottom: 10px;
+}
+
+// rounded input text
+.rounded {
+  padding-left: 14px;
+  padding-right: 14px;
+  margin-bottom: 0; // remove the default margin on all inputs
+  .box-round(14px);
+}
+
+.form-default,
+.form-h {
+  label { 
+    margin-top: 10px; 
+    display: inline-block;
+  }
+  input[type="text"],
+  input[type="password"],
+  textarea {
+    width: 100%;
+  }
+}
+
+.form-inline {
+  fieldset {
+    margin-top: 10px;
+    background: #f5f5f5;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #eee;
+    border: 1px solid rgba(0,0,0,.05);
+    .box-round(4px);      
+  }
+  legend {
+    margin-bottom: 20px;
+  }
+  input,
+  textarea {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+}
+/* adjust label and form element width to accomodate your layout */
+.form-h {
+  input,
+  textarea,
+  select { margin-bottom: 0; }
+  .form-element-label {
+    float: left;
+    text-align: right;
+    margin-right: 20px;
+  }
+  input[type="text"],
+  textarea {
+    width: 400px;
+    float: left;
+  }
+  button:first-child {
+    margin-left: 140px;
+  }
+}
+
+.form-element {
+  margin-bottom: @baseLineHeightinPX / 2;
+}
+legend + .form-element {
+  margin-top: @baseLineHeightinPX;
+  -webkit-margin-top-collapse: separate;
+}
+
+// Input text width
+.input-mini       { width: 60px; }
+.input-small      { width: 90px; }
+.input-medium     { width: 150px; }
+.input-large      { width: 210px; }
+.input-xlarge     { width: 270px; }
+.input-xxlarge    { width: 530px; }
+
+
+
+/*
+ *--------------------------------------------------------------
+ * BUTTONS 
+ * buttons custom default styling
+ *--------------------------------------------------------------
+ */
+.button {
+  cursor: pointer;
+  display: inline-block;
+  .ie7-inline-block();
+  padding: 4px 10px 4px;
+  .box-round(4px);
+  color: @darkerGrey;
+  line-height: @baseLineHeight;
+  .buttonBackground(@btnBackground, @btnBackgroundHighlight);
+  border: 1px solid @btnBorder;
+  border-bottom-color: darken(@btnBorder, 10%);
+  .text-shadow(0, 1px, 1px, rgba(255,255,255,.75));
+  @shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+    .box-shadow(@shadow);
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+.button:active {
+  background-image: none;
+    @shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+    .box-shadow(@shadow);
+    background-color: darken(@white, 10%);
+    background-color: darken(@white, 15%) e("\9");
+    outline: 0;
+}
+.button:focus {
+  .tab-focus();
+}
+/* Button variant */
+.btn-primary,
+.btn-warning,
+.btn-error,
+.btn-neutral {
+  color: @white;
+  .text-shadow(0, -1px, 0, rgba(0,0,0,.25));
+}
+.btn-primary { .buttonBackground(@btnPrimaryBg, @btnPrimaryBgHighlight); }
+.btn-warning { .buttonBackground(@btnWarningBg, @btnWarningBgHighlight); }
+.btn-error { .buttonBackground(@btnErrorBg, @btnErrorBgHighlight); }
+.btn-neutral { .buttonBackground(@btnNeutralBg, @btnNeutralBgHighlight); }
